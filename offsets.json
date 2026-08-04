@@ -1,0 +1,5940 @@
+{
+  "errors": {},
+  "facts": {
+    "baselib": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "assert": 4320225848,
+        "error": 4320225980,
+        "gcinfo": 4320226092,
+        "getfenv": 4320226148,
+        "getmetatable": 4320226248,
+        "newproxy": 4320226336,
+        "next": 4320224136,
+        "print": 4320226504,
+        "rawequal": 4320226712,
+        "rawget": 4320226792,
+        "rawlen": 4320226964,
+        "rawset": 4320226872,
+        "select": 4320227092,
+        "setfenv": 4320227292,
+        "setmetatable": 4320227536,
+        "tonumber": 4320227748,
+        "tostring": 4320228052,
+        "type": 4320228108,
+        "typeof": 4320228184
+      },
+      "witnesses": []
+    },
+    "bytecode_auth": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "reachable_from_luau_load": false,
+        "sites": [
+          4378645052,
+          4378650868
+        ]
+      },
+      "witnesses": []
+    },
+    "call_adjust": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "lua_call": 4320263176,
+        "stack": 88,
+        "top": 80
+      },
+      "witnesses": []
+    },
+    "call_info.base": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 24,
+      "witnesses": []
+    },
+    "call_info.cached": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 16,
+      "witnesses": []
+    },
+    "call_info.flags": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 44,
+      "witnesses": []
+    },
+    "call_info.func": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 8,
+      "witnesses": []
+    },
+    "call_info.nresults": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 40,
+      "witnesses": []
+    },
+    "call_info.savedpc": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 32,
+      "witnesses": []
+    },
+    "call_info.size": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 48,
+      "witnesses": []
+    },
+    "call_info.top": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 0,
+      "witnesses": []
+    },
+    "call_info_layout": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "base": 24,
+        "cached": 16,
+        "flags": 44,
+        "func": 8,
+        "nresults": 40,
+        "savedpc": 32,
+        "top": 0
+      },
+      "witnesses": []
+    },
+    "capabilities": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "AccessOutsideWrite": 2048,
+        "Animation": 268435456,
+        "AssetCreateUpdate": 1099511627776,
+        "AssetManagement": 137438953472,
+        "AssetRead": 68719476736,
+        "Assistant": 4611686018427387904,
+        "Audio": 2097152,
+        "AvatarAppearance": 536870912,
+        "AvatarBehavior": 9007199254740992,
+        "Basic": 1048576,
+        "CSG": 67108864,
+        "CapabilityControl": 34359738368,
+        "Capture": 2199023255552,
+        "Chat": 134217728,
+        "Consequences": 2251799813685248,
+        "CreateInstances": 524288,
+        "DataStore": 4194304,
+        "DynamicGeneration": 274877906944,
+        "Environment": 2147483648,
+        "Groups": 562949953421312,
+        "Input": 1073741824,
+        "InternalTest": 1152921504606846976,
+        "LegacySound": 8589934592,
+        "LoadOwnedAsset": 17592186044416,
+        "LoadString": 131072,
+        "LoadUnownedAsset": 65536,
+        "LocalUser": 2,
+        "Logging": 140737488355328,
+        "Material": 4503599627370496,
+        "Monetization": 8796093022208,
+        "Network": 8388608,
+        "NotAccessible": 32,
+        "Physics": 16777216,
+        "PlatformAvatarEditing": 549755813888,
+        "Players": 17179869184,
+        "Plugin": 1,
+        "PluginOrOpenCloud": 2305843009213693952,
+        "PromptExternalPurchase": 281474976710656,
+        "RemoteEvent": 4294967296,
+        "Restricted": 9223372036854775808,
+        "RobloxEngine": 16,
+        "RobloxScript": 8,
+        "RunClientScript": 256,
+        "RunServerScript": 512,
+        "ScriptGlobals": 262144,
+        "SensitiveInput": 4398046511104,
+        "ServerCommunication": 70368744177664,
+        "Social": 35184372088832,
+        "Teleport": 1125899906842624,
+        "UI": 33554432,
+        "Unassigned": 32768,
+        "WritePlayer": 4
+      },
+      "witnesses": []
+    },
+    "capability_name_func": {
+      "confidence": "single",
+      "method": "mask-to-name-chain",
+      "value": 4299535464,
+      "witnesses": [
+        "mask-to-name-chain"
+      ]
+    },
+    "capability_write_sites": {
+      "confidence": "single",
+      "method": "direct",
+      "value": [
+        [
+          4297475252,
+          64,
+          18014398509481728
+        ]
+      ],
+      "witnesses": []
+    },
+    "closure.nupvalues": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 5,
+      "witnesses": []
+    },
+    "closure.proto": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 24,
+      "witnesses": []
+    },
+    "closure.upvals": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 48,
+      "witnesses": []
+    },
+    "closure_capabilities": {
+      "confidence": "single",
+      "method": "thread-capability-delegate",
+      "value": 4297151792,
+      "witnesses": [
+        "thread-capability-delegate"
+      ]
+    },
+    "closure_layout": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "cont": 32,
+        "debugname": 40,
+        "fn": 24
+      },
+      "witnesses": []
+    },
+    "defined_capabilities": {
+      "confidence": "corroborated",
+      "method": "vote",
+      "value": 18014398509452032,
+      "witnesses": [
+        "0x10045b45c",
+        "0x10045b45c",
+        "0x10045b45c"
+      ]
+    },
+    "encrypted_fields": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "closure.cont": "xor_field_address",
+        "closure.debugname": "value_minus_field_address",
+        "proto.capabilities": "value_plus_field_address",
+        "tstring.hash": "field_address_minus_value",
+        "udata.metatable": "field_address_minus_value"
+      },
+      "witnesses": []
+    },
+    "extra_space.capabilities": {
+      "confidence": "single",
+      "method": "vote",
+      "value": 64,
+      "witnesses": [
+        "0x1002644b4"
+      ]
+    },
+    "global_geometry": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "global": 96,
+        "mainthread": 416
+      },
+      "witnesses": []
+    },
+    "global_state.gc": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "gc_threshold": 16,
+        "total_bytes": 24
+      },
+      "witnesses": []
+    },
+    "global_state.mainthread": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 416,
+      "witnesses": []
+    },
+    "global_state.mt": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 808,
+      "witnesses": []
+    },
+    "global_state.ref_freelist": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 1232,
+      "witnesses": []
+    },
+    "global_state.registry": {
+      "confidence": "corroborated",
+      "method": "vote",
+      "value": 1216,
+      "witnesses": [
+        "index2addr_pseudo",
+        "lua_ref"
+      ]
+    },
+    "global_state.scratch": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 1200,
+      "witnesses": []
+    },
+    "global_state.strt_size": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 8,
+      "witnesses": []
+    },
+    "index2addr_pseudo": {
+      "confidence": "single",
+      "method": "lua_type-pseudo-branch",
+      "value": 4320217276,
+      "witnesses": [
+        "lua_type-pseudo-branch"
+      ]
+    },
+    "instance_check": {
+      "confidence": "single",
+      "method": "tagged-check-with-typeerror",
+      "value": 4296465588,
+      "witnesses": [
+        "tagged-check-with-typeerror"
+      ]
+    },
+    "instance_metamethods": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "index": 4296480308,
+        "namecall": 4296483972,
+        "newindex": 4296483228
+      },
+      "witnesses": []
+    },
+    "instance_push": {
+      "confidence": "single",
+      "method": "shared-ptr-userdata-push",
+      "value": 4296485844,
+      "witnesses": [
+        "shared-ptr-userdata-push"
+      ]
+    },
+    "instance_register": {
+      "confidence": "single",
+      "method": "luaL_register-Instance",
+      "value": 4296466608,
+      "witnesses": [
+        "luaL_register-Instance"
+      ]
+    },
+    "instance_tag_global": {
+      "confidence": "single",
+      "method": "register-tag-global",
+      "value": 4414671560,
+      "witnesses": [
+        "register-tag-global"
+      ]
+    },
+    "lib_array_addresses": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "bit32": 4409926664,
+        "buffer": 4409927384,
+        "coroutine": 4409929912,
+        "integer": 4409930632,
+        "math": 4409931272,
+        "os": 4409931880,
+        "string": 4409931960,
+        "table": 4409932248,
+        "utf8": 4409932816,
+        "vector": 4409932912
+      },
+      "witnesses": []
+    },
+    "lib_arrays": {
+      "confidence": "single",
+      "method": "direct",
+      "value": [
+        [
+          4408825112,
+          [
+            [
+              "new",
+              4296254696
+            ],
+            [
+              "fromRGB",
+              4296254952
+            ],
+            [
+              "toHSV",
+              4296255228
+            ],
+            [
+              "fromHSV",
+              4296255380
+            ],
+            [
+              "fromHex",
+              4296255584
+            ]
+          ]
+        ],
+        [
+          4408825208,
+          [
+            [
+              "lerp",
+              4296255760
+            ],
+            [
+              "Lerp",
+              4296255760
+            ],
+            [
+              "ToHSV",
+              4296255864
+            ],
+            [
+              "ToHex",
+              4296256276
+            ]
+          ]
+        ],
+        [
+          4408825288,
+          [
+            [
+              "r",
+              4296256736
+            ],
+            [
+              "R",
+              4296256736
+            ],
+            [
+              "g",
+              4296256792
+            ],
+            [
+              "G",
+              4296256792
+            ],
+            [
+              "b",
+              4296256848
+            ],
+            [
+              "B",
+              4296256848
+            ]
+          ]
+        ],
+        [
+          4408825480,
+          [
+            [
+              "Origin",
+              4296257904
+            ],
+            [
+              "Direction",
+              4296257960
+            ],
+            [
+              "unit",
+              4296258016
+            ],
+            [
+              "Unit",
+              4296258016
+            ]
+          ]
+        ],
+        [
+          4408825752,
+          [
+            [
+              "Density",
+              4296260816
+            ],
+            [
+              "Friction",
+              4296260872
+            ],
+            [
+              "Elasticity",
+              4296260928
+            ],
+            [
+              "FrictionWeight",
+              4296260984
+            ],
+            [
+              "ElasticityWeight",
+              4296261040
+            ],
+            [
+              "AcousticAbsorption",
+              4296261096
+            ]
+          ]
+        ],
+        [
+          4408825896,
+          [
+            [
+              "Min",
+              4296264648
+            ],
+            [
+              "Max",
+              4296264732
+            ],
+            [
+              "Width",
+              4296264816
+            ],
+            [
+              "Height",
+              4296264880
+            ]
+          ]
+        ],
+        [
+          4408825976,
+          [
+            [
+              "new",
+              4296265260
+            ],
+            [
+              "FromNormalId",
+              4296265488
+            ],
+            [
+              "fromNormalId",
+              4296265488
+            ],
+            [
+              "FromAxis",
+              4296265532
+            ],
+            [
+              "fromAxis",
+              4296265532
+            ],
+            [
+              "min",
+              4296265596
+            ],
+            [
+              "max",
+              4296265768
+            ]
+          ]
+        ],
+        [
+          4408826104,
+          [
+            [
+              "Cross",
+              4296265940
+            ],
+            [
+              "Dot",
+              4296266072
+            ],
+            [
+              "isClose",
+              4296266184
+            ],
+            [
+              "Min",
+              4296265596
+            ],
+            [
+              "Max",
+              4296265768
+            ],
+            [
+              "FuzzyEq",
+              4296266184
+            ],
+            [
+              "lerp",
+              4296266340
+            ],
+            [
+              "Lerp",
+              4296266340
+            ],
+            [
+              "Angle",
+              4296266500
+            ],
+            [
+              "Floor",
+              4296266728
+            ],
+            [
+              "Ceil",
+              4296266788
+            ],
+            [
+              "Abs",
+              4296266848
+            ],
+            [
+              "Sign",
+              4296266908
+            ]
+          ]
+        ],
+        [
+          4408826328,
+          [
+            [
+              "unit",
+              4296267004
+            ],
+            [
+              "Unit",
+              4296267004
+            ],
+            [
+              "magnitude",
+              4296267096
+            ],
+            [
+              "Magnitude",
+              4296267096
+            ],
+            [
+              "X",
+              4296267172
+            ],
+            [
+              "x",
+              4296267172
+            ],
+            [
+              "Y",
+              4296267252
+            ],
+            [
+              "y",
+              4296267252
+            ],
+            [
+              "Z",
+              4296267332
+            ],
+            [
+              "z",
+              4296267332
+            ]
+          ]
+        ],
+        [
+          4408826536,
+          [
+            [
+              "x",
+              4296268684
+            ],
+            [
+              "X",
+              4296268684
+            ],
+            [
+              "y",
+              4296268736
+            ],
+            [
+              "Y",
+              4296268736
+            ],
+            [
+              "z",
+              4296268788
+            ],
+            [
+              "Z",
+              4296268788
+            ]
+          ]
+        ],
+        [
+          4408826680,
+          [
+            [
+              "x",
+              4296270468
+            ],
+            [
+              "X",
+              4296270468
+            ],
+            [
+              "y",
+              4296270520
+            ],
+            [
+              "Y",
+              4296270520
+            ]
+          ]
+        ],
+        [
+          4408826760,
+          [
+            [
+              "new",
+              4296272088
+            ],
+            [
+              "min",
+              4296272336
+            ],
+            [
+              "max",
+              4296272492
+            ]
+          ]
+        ],
+        [
+          4408826824,
+          [
+            [
+              "lerp",
+              4296272648
+            ],
+            [
+              "Lerp",
+              4296272648
+            ],
+            [
+              "Dot",
+              4296272736
+            ],
+            [
+              "Cross",
+              4296272776
+            ],
+            [
+              "Min",
+              4296272336
+            ],
+            [
+              "Max",
+              4296272492
+            ],
+            [
+              "Abs",
+              4296272816
+            ],
+            [
+              "Sign",
+              4296272904
+            ],
+            [
+              "Floor",
+              4296273016
+            ],
+            [
+              "Ceil",
+              4296273104
+            ],
+            [
+              "FuzzyEq",
+              4296273192
+            ],
+            [
+              "Angle",
+              4296273396
+            ]
+          ]
+        ],
+        [
+          4408827032,
+          [
+            [
+              "x",
+              4296273608
+            ],
+            [
+              "X",
+              4296273608
+            ],
+            [
+              "y",
+              4296273664
+            ],
+            [
+              "Y",
+              4296273664
+            ],
+            [
+              "unit",
+              4296273720
+            ],
+            [
+              "Unit",
+              4296273720
+            ],
+            [
+              "magnitude",
+              4296273828
+            ],
+            [
+              "Magnitude",
+              4296273828
+            ]
+          ]
+        ],
+        [
+          4408827256,
+          [
+            [
+              "new",
+              4296275668
+            ],
+            [
+              "random",
+              4296276100
+            ],
+            [
+              "palette",
+              4296276172
+            ],
+            [
+              "New",
+              4296275668
+            ],
+            [
+              "Random",
+              4296276100
+            ],
+            [
+              "White",
+              4296276248
+            ],
+            [
+              "Gray",
+              4296276300
+            ],
+            [
+              "DarkGray",
+              4296276352
+            ],
+            [
+              "Black",
+              4296276404
+            ],
+            [
+              "Red",
+              4296276456
+            ],
+            [
+              "Yellow",
+              4296276508
+            ],
+            [
+              "Green",
+              4296276560
+            ],
+            [
+              "Blue",
+              4296276612
+            ]
+          ]
+        ],
+        [
+          4408827480,
+          [
+            [
+              "number",
+              4296276664
+            ],
+            [
+              "Number",
+              4296276664
+            ],
+            [
+              "Color",
+              4296276716
+            ],
+            [
+              "r",
+              4296276824
+            ],
+            [
+              "g",
+              4296276880
+            ],
+            [
+              "b",
+              4296276936
+            ],
+            [
+              "name",
+              4296276992
+            ],
+            [
+              "Name",
+              4296276992
+            ]
+          ]
+        ],
+        [
+          4408827624,
+          [
+            [
+              "new",
+              4296277228
+            ],
+            [
+              "fromEulerAnglesXYZ",
+              4296277832
+            ],
+            [
+              "Angles",
+              4296277832
+            ],
+            [
+              "fromEulerAnglesYXZ",
+              4296277928
+            ],
+            [
+              "fromOrientation",
+              4296277928
+            ],
+            [
+              "fromEulerAngles",
+              4296278024
+            ],
+            [
+              "fromAxisAngle",
+              4296278660
+            ],
+            [
+              "fromMatrix",
+              4296278756
+            ],
+            [
+              "lookAt",
+              4296279072
+            ],
+            [
+              "lookAlong",
+              4296279308
+            ],
+            [
+              "fromRotationBetweenVectors",
+              4296279528
+            ]
+          ]
+        ],
+        [
+          4408827816,
+          [
+            [
+              "inverse",
+              4296279968
+            ],
+            [
+              "Inverse",
+              4296279968
+            ],
+            [
+              "lerp",
+              4296280064
+            ],
+            [
+              "Lerp",
+              4296280064
+            ],
+            [
+              "toWorldSpace",
+              4296280160
+            ],
+            [
+              "ToWorldSpace",
+              4296280160
+            ],
+            [
+              "toObjectSpace",
+              4296280440
+            ],
+            [
+              "ToObjectSpace",
+              4296280440
+            ],
+            [
+              "pointToWorldSpace",
+              4296280732
+            ],
+            [
+              "PointToWorldSpace",
+              4296280732
+            ],
+            [
+              "pointToObjectSpace",
+              4296281072
+            ],
+            [
+              "PointToObjectSpace",
+              4296281072
+            ],
+            [
+              "vectorToWorldSpace",
+              4296281348
+            ],
+            [
+              "VectorToWorldSpace",
+              4296281348
+            ],
+            [
+              "vectorToObjectSpace",
+              4296281664
+            ],
+            [
+              "VectorToObjectSpace",
+              4296281664
+            ],
+            [
+              "toEulerAnglesXYZ",
+              4296281960
+            ],
+            [
+              "ToEulerAnglesXYZ",
+              4296281960
+            ],
+            [
+              "toEulerAnglesYXZ",
+              4296282072
+            ],
+            [
+              "ToEulerAnglesYXZ",
+              4296282072
+            ],
+            [
+              "toEulerAngles",
+              4296282184
+            ],
+            [
+              "ToEulerAngles",
+              4296282184
+            ],
+            [
+              "toOrientation",
+              4296282072
+            ],
+            [
+              "ToOrientation",
+              4296282072
+            ],
+            [
+              "components",
+              4296282516
+            ],
+            [
+              "GetComponents",
+              4296282516
+            ],
+            [
+              "toAxisAngle",
+              4296282668
+            ],
+            [
+              "ToAxisAngle",
+              4296282668
+            ],
+            [
+              "AngleBetween",
+              4296282768
+            ],
+            [
+              "Orthonormalize",
+              4296282884
+            ],
+            [
+              "FuzzyEq",
+              4296283000
+            ]
+          ]
+        ],
+        [
+          4408828328,
+          [
+            [
+              "x",
+              4296283264
+            ],
+            [
+              "X",
+              4296283264
+            ],
+            [
+              "y",
+              4296283320
+            ],
+            [
+              "Y",
+              4296283320
+            ],
+            [
+              "z",
+              4296283376
+            ],
+            [
+              "Z",
+              4296283376
+            ],
+            [
+              "p",
+              4296283432
+            ],
+            [
+              "Position",
+              4296283432
+            ],
+            [
+              "Rotation",
+              4296283488
+            ],
+            [
+              "lookVector",
+              4296283644
+            ],
+            [
+              "LookVector",
+              4296283644
+            ],
+            [
+              "rightVector",
+              4296283716
+            ],
+            [
+              "RightVector",
+              4296283716
+            ],
+            [
+              "upVector",
+              4296283776
+            ],
+            [
+              "UpVector",
+              4296283776
+            ],
+            [
+              "XVector",
+              4296283716
+            ],
+            [
+              "YVector",
+              4296283776
+            ],
+            [
+              "ZVector",
+              4296283836
+            ]
+          ]
+        ],
+        [
+          4408828744,
+          [
+            [
+              "now",
+              4296286036
+            ],
+            [
+              "fromUnixTimestamp",
+              4296286120
+            ],
+            [
+              "fromUnixTimestampMillis",
+              4296286240
+            ],
+            [
+              "fromUniversalTime",
+              4296286360
+            ],
+            [
+              "fromLocalTime",
+              4296286824
+            ],
+            [
+              "fromIsoDate",
+              4296287288
+            ]
+          ]
+        ],
+        [
+          4408828856,
+          [
+            [
+              "ToUniversalTime",
+              4296287544
+            ],
+            [
+              "ToLocalTime",
+              4296287680
+            ],
+            [
+              "ToIsoDate",
+              4296287816
+            ],
+            [
+              "FormatUniversalTime",
+              4296287928
+            ],
+            [
+              "FormatLocalTime",
+              4296288212
+            ]
+          ]
+        ],
+        [
+          4408829160,
+          [
+            [
+              "new",
+              4296292436
+            ],
+            [
+              "fromOffset",
+              4296292848
+            ],
+            [
+              "fromScale",
+              4296293036
+            ]
+          ]
+        ],
+        [
+          4408829272,
+          [
+            [
+              "X",
+              4296293328
+            ],
+            [
+              "Width",
+              4296293328
+            ],
+            [
+              "Y",
+              4296293408
+            ],
+            [
+              "Height",
+              4296293408
+            ]
+          ]
+        ],
+        [
+          4408829384,
+          [
+            [
+              "Top",
+              4296294608
+            ],
+            [
+              "Bottom",
+              4296294668
+            ],
+            [
+              "Back",
+              4296294728
+            ],
+            [
+              "Front",
+              4296294788
+            ],
+            [
+              "Right",
+              4296294848
+            ],
+            [
+              "Left",
+              4296294908
+            ]
+          ]
+        ],
+        [
+          4408829528,
+          [
+            [
+              "X",
+              4296295380
+            ],
+            [
+              "Y",
+              4296295440
+            ],
+            [
+              "Z",
+              4296295500
+            ],
+            [
+              "Top",
+              4296295560
+            ],
+            [
+              "Bottom",
+              4296295620
+            ],
+            [
+              "Back",
+              4296295680
+            ],
+            [
+              "Front",
+              4296295740
+            ],
+            [
+              "Right",
+              4296295800
+            ],
+            [
+              "Left",
+              4296295860
+            ]
+          ]
+        ],
+        [
+          4408829720,
+          [
+            [
+              "IsNil",
+              4296296352
+            ],
+            [
+              "Location",
+              4296296404
+            ],
+            [
+              "TerrainPart",
+              4296296460
+            ]
+          ]
+        ],
+        [
+          4408829784,
+          [
+            [
+              "new",
+              4296297248
+            ],
+            [
+              "isFrozen",
+              4296297600
+            ],
+            [
+              "clone",
+              4296297656
+            ],
+            [
+              "cloneAndFreeze",
+              4296297684
+            ],
+            [
+              "increment",
+              4296297712
+            ],
+            [
+              "size",
+              4296298460
+            ],
+            [
+              "update",
+              4296298516
+            ],
+            [
+              "clear",
+              4296299572
+            ]
+          ]
+        ],
+        [
+          4408830088,
+          [
+            [
+              "Time",
+              4296306168
+            ],
+            [
+              "Value",
+              4296306224
+            ],
+            [
+              "Envelope",
+              4296306280
+            ]
+          ]
+        ],
+        [
+          4408830344,
+          [
+            [
+              "Time",
+              4296308068
+            ],
+            [
+              "DelayTime",
+              4296308124
+            ],
+            [
+              "RepeatCount",
+              4296308180
+            ],
+            [
+              "Reverses",
+              4296308236
+            ],
+            [
+              "EasingStyle",
+              4296308288
+            ],
+            [
+              "EasingDirection",
+              4296308412
+            ]
+          ]
+        ],
+        [
+          4408830520,
+          [
+            [
+              "Sender",
+              4296311464
+            ],
+            [
+              "MimeType",
+              4296311576
+            ],
+            [
+              "Data",
+              4296311688
+            ],
+            [
+              "MouseIcon",
+              4296311800
+            ],
+            [
+              "DragIcon",
+              4296311916
+            ],
+            [
+              "HotSpot",
+              4296312032
+            ]
+          ]
+        ],
+        [
+          4408830664,
+          [
+            [
+              "NextNumber",
+              4296313268
+            ],
+            [
+              "NextInteger",
+              4296313476
+            ],
+            [
+              "NextUnitVector",
+              4296313584
+            ],
+            [
+              "Clone",
+              4296313636
+            ],
+            [
+              "Shuffle",
+              4296313716
+            ]
+          ]
+        ],
+        [
+          4408830792,
+          [
+            [
+              "Position",
+              4296314924
+            ],
+            [
+              "Action",
+              4296314984
+            ],
+            [
+              "Label",
+              4296315112
+            ]
+          ]
+        ],
+        [
+          4408830888,
+          [
+            [
+              "Time",
+              4296315524
+            ],
+            [
+              "Value",
+              4296315576
+            ],
+            [
+              "LeftTangent",
+              4296315628
+            ],
+            [
+              "RightTangent",
+              4296315704
+            ],
+            [
+              "LeftEffectiveTangent",
+              4296315780
+            ],
+            [
+              "RightEffectiveTangent",
+              4296315860
+            ],
+            [
+              "Interpolation",
+              4296315940
+            ]
+          ]
+        ],
+        [
+          4408831016,
+          [
+            [
+              "Time",
+              4296316488
+            ],
+            [
+              "Value",
+              4296316588
+            ],
+            [
+              "LeftTangent",
+              4296316688
+            ],
+            [
+              "RightTangent",
+              4296316808
+            ],
+            [
+              "Interpolation",
+              4296316928
+            ]
+          ]
+        ],
+        [
+          4408831144,
+          [
+            [
+              "Time",
+              4296317644
+            ],
+            [
+              "Value",
+              4296317696
+            ],
+            [
+              "LeftTangent",
+              4296317948
+            ],
+            [
+              "RightTangent",
+              4296318024
+            ],
+            [
+              "LeftEffectiveTangent",
+              4296318100
+            ],
+            [
+              "RightEffectiveTangent",
+              4296318180
+            ],
+            [
+              "Interpolation",
+              4296318260
+            ]
+          ]
+        ],
+        [
+          4408831272,
+          [
+            [
+              "Time",
+              4296318456
+            ],
+            [
+              "Value",
+              4296318556
+            ],
+            [
+              "LeftTangent",
+              4296319016
+            ],
+            [
+              "RightTangent",
+              4296319136
+            ],
+            [
+              "Interpolation",
+              4296319256
+            ]
+          ]
+        ],
+        [
+          4408831400,
+          [
+            [
+              "Time",
+              4296319604
+            ],
+            [
+              "Value",
+              4296319656
+            ],
+            [
+              "LeftTangent",
+              4296319848
+            ],
+            [
+              "RightTangent",
+              4296319924
+            ],
+            [
+              "LeftEffectiveTangent",
+              4296320000
+            ],
+            [
+              "RightEffectiveTangent",
+              4296320080
+            ],
+            [
+              "Interpolation",
+              4296320160
+            ]
+          ]
+        ],
+        [
+          4408831528,
+          [
+            [
+              "Time",
+              4296320356
+            ],
+            [
+              "Value",
+              4296320456
+            ],
+            [
+              "LeftTangent",
+              4296320592
+            ],
+            [
+              "RightTangent",
+              4296320720
+            ],
+            [
+              "Interpolation",
+              4296320848
+            ]
+          ]
+        ],
+        [
+          4408831688,
+          [
+            [
+              "IgnoreWater",
+              4296322692
+            ],
+            [
+              "FilterType",
+              4296322744
+            ],
+            [
+              "FilterDescendantsInstances",
+              4296322796
+            ],
+            [
+              "ExcludeInstances",
+              4296322876
+            ],
+            [
+              "IncludeInstances",
+              4296322972
+            ],
+            [
+              "CollisionGroup",
+              4296323072
+            ],
+            [
+              "BruteForceAllSlow",
+              4296323216
+            ],
+            [
+              "RespectCanCollide",
+              4296323268
+            ]
+          ]
+        ],
+        [
+          4408831832,
+          [
+            [
+              "IgnoreWater",
+              4296323320
+            ],
+            [
+              "FilterType",
+              4296323400
+            ],
+            [
+              "FilterDescendantsInstances",
+              4296323456
+            ],
+            [
+              "ExcludeInstances",
+              4296323692
+            ],
+            [
+              "IncludeInstances",
+              4296323896
+            ],
+            [
+              "CollisionGroup",
+              4296324128
+            ],
+            [
+              "BruteForceAllSlow",
+              4296324228
+            ],
+            [
+              "RespectCanCollide",
+              4296324308
+            ]
+          ]
+        ],
+        [
+          4408831976,
+          [
+            [
+              "Position",
+              4296325660
+            ],
+            [
+              "Normal",
+              4296325716
+            ],
+            [
+              "Distance",
+              4296325772
+            ],
+            [
+              "Instance",
+              4296325828
+            ],
+            [
+              "Material",
+              4296325880
+            ]
+          ]
+        ],
+        [
+          4408832136,
+          [
+            [
+              "Tolerance",
+              4296327204
+            ],
+            [
+              "MaxParts",
+              4296327260
+            ],
+            [
+              "FilterType",
+              4296327316
+            ],
+            [
+              "FilterDescendantsInstances",
+              4296327368
+            ],
+            [
+              "ExcludeInstances",
+              4296327448
+            ],
+            [
+              "IncludeInstances",
+              4296327544
+            ],
+            [
+              "CollisionGroup",
+              4296327644
+            ],
+            [
+              "BruteForceAllSlow",
+              4296327788
+            ],
+            [
+              "RespectCanCollide",
+              4296327840
+            ]
+          ]
+        ],
+        [
+          4408832296,
+          [
+            [
+              "Tolerance",
+              4296327892
+            ],
+            [
+              "MaxParts",
+              4296328076
+            ],
+            [
+              "FilterType",
+              4296328156
+            ],
+            [
+              "FilterDescendantsInstances",
+              4296328212
+            ],
+            [
+              "ExcludeInstances",
+              4296328448
+            ],
+            [
+              "IncludeInstances",
+              4296328652
+            ],
+            [
+              "CollisionGroup",
+              4296328884
+            ],
+            [
+              "BruteForceAllSlow",
+              4296328984
+            ],
+            [
+              "RespectCanCollide",
+              4296329064
+            ]
+          ]
+        ],
+        [
+          4408832488,
+          [
+            [
+              "SearchKeyword",
+              4296329772
+            ],
+            [
+              "MinPrice",
+              4296329884
+            ],
+            [
+              "MaxPrice",
+              4296329940
+            ],
+            [
+              "SortType",
+              4296329996
+            ],
+            [
+              "SalesTypeFilter",
+              4296330088
+            ],
+            [
+              "SortAggregation",
+              4296330180
+            ],
+            [
+              "CreatorName",
+              4296330272
+            ],
+            [
+              "CategoryFilter",
+              4296330384
+            ],
+            [
+              "BundleTypes",
+              4296330476
+            ],
+            [
+              "AssetTypes",
+              4296330712
+            ],
+            [
+              "IncludeOffSale",
+              4296330948
+            ],
+            [
+              "Limit",
+              4296331004
+            ],
+            [
+              "CreatorId",
+              4296331060
+            ],
+            [
+              "CreatorType",
+              4296331116
+            ]
+          ]
+        ],
+        [
+          4408832728,
+          [
+            [
+              "SearchKeyword",
+              4296331208
+            ],
+            [
+              "MinPrice",
+              4296331344
+            ],
+            [
+              "MaxPrice",
+              4296331412
+            ],
+            [
+              "SortType",
+              4296331480
+            ],
+            [
+              "SalesTypeFilter",
+              4296331680
+            ],
+            [
+              "SortAggregation",
+              4296331880
+            ],
+            [
+              "CreatorName",
+              4296332080
+            ],
+            [
+              "CategoryFilter",
+              4296332216
+            ],
+            [
+              "BundleTypes",
+              4296332416
+            ],
+            [
+              "AssetTypes",
+              4296332808
+            ],
+            [
+              "IncludeOffSale",
+              4296333200
+            ],
+            [
+              "Limit",
+              4296333272
+            ],
+            [
+              "CreatorId",
+              4296333340
+            ],
+            [
+              "CreatorType",
+              4296333408
+            ]
+          ]
+        ],
+        [
+          4408833000,
+          [
+            [
+              "Title",
+              4296334528
+            ],
+            [
+              "IsVisible",
+              4296334620
+            ],
+            [
+              "SearchType",
+              4296334692
+            ],
+            [
+              "TransitionAnimation",
+              4296334784
+            ],
+            [
+              "ShowDomainAsTitle",
+              4296334876
+            ],
+            [
+              "BackButtonVisible",
+              4296334948
+            ],
+            [
+              "HideHeader",
+              4296335020
+            ]
+          ]
+        ],
+        [
+          4408833128,
+          [
+            [
+              "Title",
+              4296335092
+            ],
+            [
+              "IsVisible",
+              4296335420
+            ],
+            [
+              "SearchType",
+              4296335524
+            ],
+            [
+              "TransitionAnimation",
+              4296335852
+            ],
+            [
+              "ShowDomainAsTitle",
+              4296336180
+            ],
+            [
+              "BackButtonVisible",
+              4296336284
+            ],
+            [
+              "HideHeader",
+              4296336388
+            ]
+          ]
+        ],
+        [
+          4408833256,
+          [
+            [
+              "Family",
+              4296336644
+            ],
+            [
+              "Weight",
+              4296336716
+            ],
+            [
+              "Style",
+              4296336844
+            ],
+            [
+              "Bold",
+              4296336972
+            ]
+          ]
+        ],
+        [
+          4408833336,
+          [
+            [
+              "new",
+              4296337176
+            ],
+            [
+              "fromEnum",
+              4296337520
+            ],
+            [
+              "fromName",
+              4296337844
+            ],
+            [
+              "fromId",
+              4296338052
+            ]
+          ]
+        ],
+        [
+          4408833416,
+          [
+            [
+              "Family",
+              4296338220
+            ],
+            [
+              "Weight",
+              4296338356
+            ],
+            [
+              "Style",
+              4296338604
+            ],
+            [
+              "Bold",
+              4296338836
+            ]
+          ]
+        ],
+        [
+          4408833560,
+          [
+            [
+              "ApplyTo",
+              4296340120
+            ],
+            [
+              "DisableArticulatedJoints",
+              4296340304
+            ],
+            [
+              "DisableAllArticulatedJoints",
+              4296340528
+            ]
+          ]
+        ],
+        [
+          4408833624,
+          [
+            [
+              "createRest",
+              4296341036
+            ],
+            [
+              "createEmpty",
+              4296341212
+            ],
+            [
+              "MultiBlend",
+              4296341388
+            ]
+          ]
+        ],
+        [
+          4408833688,
+          [
+            [
+              "Add",
+              4296343348
+            ],
+            [
+              "Subtract",
+              4296343544
+            ],
+            [
+              "Blend",
+              4296343740
+            ],
+            [
+              "Clone",
+              4296343888
+            ],
+            [
+              "CopyFrom",
+              4296344084
+            ],
+            [
+              "GetArticulatedJoint",
+              4296344204
+            ],
+            [
+              "GetJointNames",
+              4296344604
+            ],
+            [
+              "SolveIk",
+              4296345160
+            ]
+          ]
+        ],
+        [
+          4408833832,
+          [
+            [
+              "LocalCFrame",
+              4296349424
+            ],
+            [
+              "ModelCFrame",
+              4296349540
+            ],
+            [
+              "WorldCFrame",
+              4296349656
+            ],
+            [
+              "LocalTranslation",
+              4296349772
+            ],
+            [
+              "ModelTranslation",
+              4296349844
+            ],
+            [
+              "WorldTranslation",
+              4296349916
+            ],
+            [
+              "LocalRotation",
+              4296349988
+            ],
+            [
+              "ModelRotation",
+              4296350072
+            ],
+            [
+              "WorldRotation",
+              4296350156
+            ],
+            [
+              "LocalQuaternion",
+              4296350240
+            ],
+            [
+              "ModelQuaternion",
+              4296350312
+            ],
+            [
+              "WorldQuaternion",
+              4296350384
+            ]
+          ]
+        ],
+        [
+          4408834040,
+          [
+            [
+              "LocalCFrame",
+              4296350456
+            ],
+            [
+              "ModelCFrame",
+              4296350576
+            ],
+            [
+              "WorldCFrame",
+              4296350696
+            ],
+            [
+              "LocalTranslation",
+              4296350816
+            ],
+            [
+              "ModelTranslation",
+              4296350908
+            ],
+            [
+              "WorldTranslation",
+              4296351000
+            ],
+            [
+              "LocalRotation",
+              4296351092
+            ],
+            [
+              "ModelRotation",
+              4296351188
+            ],
+            [
+              "WorldRotation",
+              4296351284
+            ],
+            [
+              "LocalQuaternion",
+              4296351380
+            ],
+            [
+              "ModelQuaternion",
+              4296351468
+            ],
+            [
+              "WorldQuaternion",
+              4296351556
+            ]
+          ]
+        ],
+        [
+          4408834280,
+          [
+            [
+              "Evaluate",
+              4296353404
+            ],
+            [
+              "GetMarkersOfType",
+              4296353764
+            ],
+            [
+              "SetTargetInstance",
+              4296354640
+            ],
+            [
+              "GetTargetInstance",
+              4296354996
+            ],
+            [
+              "GetTargetNames",
+              4296355264
+            ],
+            [
+              "GetIkDebugInfo",
+              4296355512
+            ]
+          ]
+        ],
+        [
+          4408834440,
+          [
+            [
+              "addPrefix",
+              4296359064
+            ],
+            [
+              "addSuffix",
+              4296359312
+            ],
+            [
+              "AddPrefix",
+              4296359064
+            ],
+            [
+              "AddSuffix",
+              4296359312
+            ]
+          ]
+        ],
+        [
+          4408834520,
+          [
+            [
+              "AnimationMask",
+              4296359628
+            ],
+            [
+              "EvaluationThrottled",
+              4296359728
+            ],
+            [
+              "Lod",
+              4296359788
+            ]
+          ]
+        ],
+        [
+          4408834584,
+          [
+            [
+              "Position",
+              4296360432
+            ],
+            [
+              "LeftTangent",
+              4296360516
+            ],
+            [
+              "RightTangent",
+              4296360600
+            ]
+          ]
+        ],
+        [
+          4408834648,
+          [
+            [
+              "Position",
+              4296360684
+            ],
+            [
+              "LeftTangent",
+              4296360752
+            ],
+            [
+              "RightTangent",
+              4296360820
+            ]
+          ]
+        ],
+        [
+          4408834792,
+          [
+            [
+              "Add",
+              4296361508
+            ],
+            [
+              "Remove",
+              4296361652
+            ],
+            [
+              "Contains",
+              4296361796
+            ]
+          ]
+        ],
+        [
+          4408834856,
+          [
+            [
+              "fromUri",
+              4296362708
+            ],
+            [
+              "fromAssetId",
+              4296362944
+            ],
+            [
+              "fromObject",
+              4296363180
+            ]
+          ]
+        ],
+        [
+          4408834920,
+          [
+            [
+              "SourceType",
+              4296363580
+            ],
+            [
+              "Uri",
+              4296363704
+            ],
+            [
+              "Object",
+              4296363780
+            ]
+          ]
+        ],
+        [
+          4408834984,
+          [
+            [
+              "ForEach",
+              4349863532
+            ],
+            [
+              "Destroy",
+              4349863948
+            ],
+            [
+              "GetId",
+              4349864016
+            ]
+          ]
+        ],
+        [
+          4408835048,
+          [
+            [
+              "Enabled",
+              4296364400
+            ],
+            [
+              "OnPropertyChanged",
+              4349860976
+            ],
+            [
+              "OnAttributeChanged",
+              4349861240
+            ],
+            [
+              "Debug",
+              4349903036
+            ]
+          ]
+        ],
+        [
+          4408835208,
+          [
+            [
+              "Id",
+              4296365496
+            ],
+            [
+              "DomainType",
+              4296365580
+            ],
+            [
+              "DomainId",
+              4296365732
+            ]
+          ]
+        ],
+        [
+          4408835272,
+          [
+            [
+              "Connect",
+              4295697144
+            ],
+            [
+              "SendMessage",
+              4295693672
+            ],
+            [
+              "Delay",
+              4295699172
+            ],
+            [
+              "SetMaxFrequency",
+              4295699936
+            ],
+            [
+              "Subscribe",
+              4295700056
+            ],
+            [
+              "Publish",
+              4295700232
+            ]
+          ]
+        ],
+        [
+          4408835384,
+          [
+            [
+              "Instance",
+              4296366576
+            ],
+            [
+              "Frame",
+              4296366736
+            ],
+            [
+              "LODLevel",
+              4296366836
+            ]
+          ]
+        ],
+        [
+          4408839504,
+          [
+            [
+              "profilebegin",
+              4296457140
+            ],
+            [
+              "profileend",
+              4296457276
+            ],
+            [
+              "loadmodule",
+              4296457504
+            ],
+            [
+              "getmemorycategory",
+              4296457508
+            ],
+            [
+              "setmemorycategory",
+              4296457512
+            ],
+            [
+              "resetmemorycategory",
+              4296457516
+            ],
+            [
+              "dumpheap",
+              4296457520
+            ],
+            [
+              "dumprefs",
+              4296457524
+            ],
+            [
+              "tracerefs",
+              4296457528
+            ],
+            [
+              "dumpcodesize",
+              4296457532
+            ]
+          ]
+        ],
+        [
+          4408839680,
+          [
+            [
+              "graphemes",
+              4296457536
+            ],
+            [
+              "nfcnormalize",
+              4296458732
+            ],
+            [
+              "nfdnormalize",
+              4296459256
+            ]
+          ]
+        ],
+        [
+          4408882880,
+          [
+            [
+              "print",
+              4296683548
+            ],
+            [
+              "tick",
+              4296686580
+            ],
+            [
+              "time",
+              4296686624
+            ],
+            [
+              "elapsedTime",
+              4296682652
+            ],
+            [
+              "ElapsedTime",
+              4296682652
+            ],
+            [
+              "wait",
+              4296686992
+            ],
+            [
+              "Wait",
+              4296686992
+            ],
+            [
+              "delay",
+              4296682108
+            ],
+            [
+              "Delay",
+              4296682108
+            ],
+            [
+              "spawn",
+              4296685736
+            ],
+            [
+              "Spawn",
+              4296685736
+            ],
+            [
+              "printidentity",
+              4296683584
+            ],
+            [
+              "loadstring",
+              4296682696
+            ],
+            [
+              "settings",
+              4296685328
+            ],
+            [
+              "UserSettings",
+              4296686736
+            ],
+            [
+              "PluginManager",
+              4296683360
+            ],
+            [
+              "warn",
+              4296687236
+            ],
+            [
+              "require",
+              4296683744
+            ],
+            [
+              "stats",
+              4296686232
+            ],
+            [
+              "Stats",
+              4296686232
+            ],
+            [
+              "version",
+              4296686888
+            ],
+            [
+              "Version",
+              4296686888
+            ],
+            [
+              "collectgarbage",
+              4296681400
+            ],
+            [
+              "getfenv",
+              4296687276
+            ],
+            [
+              "setfenv",
+              4296687772
+            ]
+          ]
+        ],
+        [
+          4409926344,
+          [
+            [
+              "assert",
+              4320225848
+            ],
+            [
+              "error",
+              4320225980
+            ],
+            [
+              "gcinfo",
+              4320226092
+            ],
+            [
+              "getfenv",
+              4320226148
+            ],
+            [
+              "getmetatable",
+              4320226248
+            ],
+            [
+              "next",
+              4320224136
+            ],
+            [
+              "newproxy",
+              4320226336
+            ],
+            [
+              "print",
+              4320226504
+            ],
+            [
+              "rawequal",
+              4320226712
+            ],
+            [
+              "rawget",
+              4320226792
+            ],
+            [
+              "rawset",
+              4320226872
+            ],
+            [
+              "rawlen",
+              4320226964
+            ],
+            [
+              "select",
+              4320227092
+            ],
+            [
+              "setfenv",
+              4320227292
+            ],
+            [
+              "setmetatable",
+              4320227536
+            ],
+            [
+              "tonumber",
+              4320227748
+            ],
+            [
+              "tostring",
+              4320228052
+            ],
+            [
+              "type",
+              4320228108
+            ],
+            [
+              "typeof",
+              4320228184
+            ]
+          ]
+        ],
+        [
+          4409926664,
+          [
+            [
+              "arshift",
+              4320228716
+            ],
+            [
+              "band",
+              4320228852
+            ],
+            [
+              "bnot",
+              4320228900
+            ],
+            [
+              "bor",
+              4320228952
+            ],
+            [
+              "bxor",
+              4320229064
+            ],
+            [
+              "btest",
+              4320229176
+            ],
+            [
+              "extract",
+              4320229228
+            ],
+            [
+              "lrotate",
+              4320229328
+            ],
+            [
+              "lshift",
+              4320229408
+            ],
+            [
+              "replace",
+              4320229508
+            ],
+            [
+              "rrotate",
+              4320229648
+            ],
+            [
+              "rshift",
+              4320229736
+            ],
+            [
+              "countlz",
+              4320229836
+            ],
+            [
+              "countrz",
+              4320229908
+            ],
+            [
+              "byteswap",
+              4320229980
+            ]
+          ]
+        ],
+        [
+          4409926920,
+          [
+            [
+              "create",
+              4320230616
+            ],
+            [
+              "fromstring",
+              4320230724
+            ],
+            [
+              "tostring",
+              4320230808
+            ],
+            [
+              "readi8",
+              4320230880
+            ],
+            [
+              "readu8",
+              4320231020
+            ],
+            [
+              "readi16",
+              4320231160
+            ],
+            [
+              "readu16",
+              4320231308
+            ],
+            [
+              "readi32",
+              4320231456
+            ],
+            [
+              "readu32",
+              4320231604
+            ],
+            [
+              "readf32",
+              4320231752
+            ],
+            [
+              "readf64",
+              4320231900
+            ],
+            [
+              "writei8",
+              4320232044
+            ],
+            [
+              "writeu8",
+              4320232196
+            ],
+            [
+              "writei16",
+              4320232348
+            ],
+            [
+              "writeu16",
+              4320232508
+            ],
+            [
+              "writei32",
+              4320232668
+            ],
+            [
+              "writeu32",
+              4320232828
+            ],
+            [
+              "writef32",
+              4320232988
+            ],
+            [
+              "writef64",
+              4320233152
+            ],
+            [
+              "readstring",
+              4320233312
+            ],
+            [
+              "writestring",
+              4320233528
+            ],
+            [
+              "len",
+              4320233820
+            ],
+            [
+              "copy",
+              4320233892
+            ],
+            [
+              "fill",
+              4320234212
+            ],
+            [
+              "readbits",
+              4320234444
+            ],
+            [
+              "writebits",
+              4320234748
+            ],
+            [
+              "readinteger",
+              4320235120
+            ],
+            [
+              "writeinteger",
+              4320235264
+            ]
+          ]
+        ],
+        [
+          4409927384,
+          [
+            [
+              "create",
+              4320230616
+            ],
+            [
+              "fromstring",
+              4320230724
+            ],
+            [
+              "tostring",
+              4320230808
+            ],
+            [
+              "readi8",
+              4320230880
+            ],
+            [
+              "readu8",
+              4320231020
+            ],
+            [
+              "readi16",
+              4320231160
+            ],
+            [
+              "readu16",
+              4320231308
+            ],
+            [
+              "readi32",
+              4320231456
+            ],
+            [
+              "readu32",
+              4320231604
+            ],
+            [
+              "readf32",
+              4320231752
+            ],
+            [
+              "readf64",
+              4320231900
+            ],
+            [
+              "writei8",
+              4320232044
+            ],
+            [
+              "writeu8",
+              4320232196
+            ],
+            [
+              "writei16",
+              4320232348
+            ],
+            [
+              "writeu16",
+              4320232508
+            ],
+            [
+              "writei32",
+              4320232668
+            ],
+            [
+              "writeu32",
+              4320232828
+            ],
+            [
+              "writef32",
+              4320232988
+            ],
+            [
+              "writef64",
+              4320233152
+            ],
+            [
+              "readstring",
+              4320233312
+            ],
+            [
+              "writestring",
+              4320233528
+            ],
+            [
+              "len",
+              4320233820
+            ],
+            [
+              "copy",
+              4320233892
+            ],
+            [
+              "fill",
+              4320234212
+            ],
+            [
+              "readbits",
+              4320234444
+            ],
+            [
+              "writebits",
+              4320234748
+            ]
+          ]
+        ],
+        [
+          4409929912,
+          [
+            [
+              "create",
+              4320252100
+            ],
+            [
+              "running",
+              4320252168
+            ],
+            [
+              "status",
+              4320252216
+            ],
+            [
+              "wrap",
+              4320252344
+            ],
+            [
+              "yield",
+              4320252412
+            ],
+            [
+              "isyieldable",
+              4320252432
+            ],
+            [
+              "close",
+              4320252480
+            ]
+          ]
+        ],
+        [
+          4409930248,
+          [
+            [
+              "coroutine",
+              4320251680
+            ],
+            [
+              "table",
+              4320325672
+            ],
+            [
+              "os",
+              4320300128
+            ],
+            [
+              "string",
+              4320305936
+            ],
+            [
+              "math",
+              4320289224
+            ],
+            [
+              "debug",
+              4320253880
+            ],
+            [
+              "utf8",
+              4320332476
+            ],
+            [
+              "bit32",
+              4320228676
+            ],
+            [
+              "buffer",
+              4320230548
+            ],
+            [
+              "vector",
+              4320334816
+            ],
+            [
+              "integer",
+              4320284844
+            ]
+          ]
+        ],
+        [
+          4409930456,
+          [
+            [
+              "coroutine",
+              4320251680
+            ],
+            [
+              "table",
+              4320325672
+            ],
+            [
+              "os",
+              4320300128
+            ],
+            [
+              "string",
+              4320305936
+            ],
+            [
+              "math",
+              4320289224
+            ],
+            [
+              "debug",
+              4320253880
+            ],
+            [
+              "utf8",
+              4320332476
+            ],
+            [
+              "bit32",
+              4320228676
+            ],
+            [
+              "buffer",
+              4320230548
+            ],
+            [
+              "vector",
+              4320334816
+            ]
+          ]
+        ],
+        [
+          4409930632,
+          [
+            [
+              "create",
+              4320284960
+            ],
+            [
+              "tonumber",
+              4320285064
+            ],
+            [
+              "neg",
+              4320285116
+            ],
+            [
+              "add",
+              4320285168
+            ],
+            [
+              "sub",
+              4320285236
+            ],
+            [
+              "mul",
+              4320285304
+            ],
+            [
+              "div",
+              4320285372
+            ],
+            [
+              "min",
+              4320285548
+            ],
+            [
+              "max",
+              4320285668
+            ],
+            [
+              "rem",
+              4320285788
+            ],
+            [
+              "idiv",
+              4320285940
+            ],
+            [
+              "udiv",
+              4320286136
+            ],
+            [
+              "urem",
+              4320286256
+            ],
+            [
+              "mod",
+              4320286380
+            ],
+            [
+              "clamp",
+              4320286548
+            ],
+            [
+              "band",
+              4320286712
+            ],
+            [
+              "bor",
+              4320286824
+            ],
+            [
+              "bnot",
+              4320286936
+            ],
+            [
+              "bxor",
+              4320286988
+            ],
+            [
+              "lt",
+              4320287100
+            ],
+            [
+              "le",
+              4320287172
+            ],
+            [
+              "ult",
+              4320287244
+            ],
+            [
+              "ule",
+              4320287316
+            ],
+            [
+              "gt",
+              4320287388
+            ],
+            [
+              "ge",
+              4320287460
+            ],
+            [
+              "ugt",
+              4320287532
+            ],
+            [
+              "uge",
+              4320287604
+            ],
+            [
+              "lshift",
+              4320287676
+            ],
+            [
+              "rshift",
+              4320287772
+            ],
+            [
+              "arshift",
+              4320287868
+            ],
+            [
+              "lrotate",
+              4320287976
+            ],
+            [
+              "rrotate",
+              4320288064
+            ],
+            [
+              "extract",
+              4320288152
+            ],
+            [
+              "replace",
+              4320288428
+            ],
+            [
+              "btest",
+              4320288732
+            ],
+            [
+              "countrz",
+              4320288848
+            ],
+            [
+              "countlz",
+              4320288904
+            ],
+            [
+              "bswap",
+              4320288956
+            ],
+            [
+              "fromstring",
+              4320289008
+            ]
+          ]
+        ],
+        [
+          4409931272,
+          [
+            [
+              "abs",
+              4320289608
+            ],
+            [
+              "acos",
+              4320289660
+            ],
+            [
+              "asin",
+              4320289712
+            ],
+            [
+              "atan2",
+              4320289764
+            ],
+            [
+              "atan",
+              4320289848
+            ],
+            [
+              "ceil",
+              4320289900
+            ],
+            [
+              "cosh",
+              4320289952
+            ],
+            [
+              "cos",
+              4320290004
+            ],
+            [
+              "deg",
+              4320290056
+            ],
+            [
+              "exp",
+              4320290116
+            ],
+            [
+              "floor",
+              4320290168
+            ],
+            [
+              "fmod",
+              4320290220
+            ],
+            [
+              "frexp",
+              4320290304
+            ],
+            [
+              "ldexp",
+              4320290380
+            ],
+            [
+              "log10",
+              4320290460
+            ],
+            [
+              "log",
+              4320290512
+            ],
+            [
+              "max",
+              4320290692
+            ],
+            [
+              "min",
+              4320290824
+            ],
+            [
+              "modf",
+              4320290956
+            ],
+            [
+              "pow",
+              4320291048
+            ],
+            [
+              "rad",
+              4320291132
+            ],
+            [
+              "random",
+              4320291192
+            ],
+            [
+              "randomseed",
+              4320291744
+            ],
+            [
+              "sinh",
+              4320291832
+            ],
+            [
+              "sin",
+              4320291884
+            ],
+            [
+              "sqrt",
+              4320291936
+            ],
+            [
+              "tanh",
+              4320291988
+            ],
+            [
+              "tan",
+              4320292040
+            ],
+            [
+              "noise",
+              4320292092
+            ],
+            [
+              "clamp",
+              4320293136
+            ],
+            [
+              "sign",
+              4320293300
+            ],
+            [
+              "round",
+              4320293372
+            ],
+            [
+              "map",
+              4320293424
+            ],
+            [
+              "lerp",
+              4320293576
+            ],
+            [
+              "isnan",
+              4320293688
+            ],
+            [
+              "isinf",
+              4320293744
+            ],
+            [
+              "isfinite",
+              4320293812
+            ]
+          ]
+        ],
+        [
+          4409931880,
+          [
+            [
+              "clock",
+              4320300168
+            ],
+            [
+              "date",
+              4320300212
+            ],
+            [
+              "difftime",
+              4320301076
+            ],
+            [
+              "time",
+              4320301156
+            ]
+          ]
+        ],
+        [
+          4409931960,
+          [
+            [
+              "byte",
+              4320306104
+            ],
+            [
+              "char",
+              4320306388
+            ],
+            [
+              "find",
+              4320306628
+            ],
+            [
+              "format",
+              4320306636
+            ],
+            [
+              "gmatch",
+              4320308420
+            ],
+            [
+              "gsub",
+              4320308532
+            ],
+            [
+              "len",
+              4320309632
+            ],
+            [
+              "lower",
+              4320309696
+            ],
+            [
+              "match",
+              4320309880
+            ],
+            [
+              "rep",
+              4320309888
+            ],
+            [
+              "reverse",
+              4320310236
+            ],
+            [
+              "sub",
+              4320310404
+            ],
+            [
+              "upper",
+              4320310600
+            ],
+            [
+              "split",
+              4320310784
+            ],
+            [
+              "pack",
+              4320311096
+            ],
+            [
+              "packsize",
+              4320312288
+            ],
+            [
+              "unpack",
+              4320312560
+            ]
+          ]
+        ],
+        [
+          4409932248,
+          [
+            [
+              "concat",
+              4320326136
+            ],
+            [
+              "foreach",
+              4320326464
+            ],
+            [
+              "foreachi",
+              4320326640
+            ],
+            [
+              "getn",
+              4320326840
+            ],
+            [
+              "maxn",
+              4320326908
+            ],
+            [
+              "insert",
+              4320327116
+            ],
+            [
+              "remove",
+              4320327336
+            ],
+            [
+              "sort",
+              4320327512
+            ],
+            [
+              "pack",
+              4320327700
+            ],
+            [
+              "unpack",
+              4320325776
+            ],
+            [
+              "move",
+              4320327868
+            ],
+            [
+              "create",
+              4320328256
+            ],
+            [
+              "find",
+              4320328452
+            ],
+            [
+              "clear",
+              4320328712
+            ],
+            [
+              "freeze",
+              4320328784
+            ],
+            [
+              "isfrozen",
+              4320328992
+            ],
+            [
+              "clone",
+              4320329060
+            ]
+          ]
+        ],
+        [
+          4409932816,
+          [
+            [
+              "offset",
+              4320332568
+            ],
+            [
+              "codepoint",
+              4320333056
+            ],
+            [
+              "char",
+              4320333460
+            ],
+            [
+              "len",
+              4320333688
+            ],
+            [
+              "codes",
+              4320334052
+            ]
+          ]
+        ],
+        [
+          4409932912,
+          [
+            [
+              "create",
+              4320335096
+            ],
+            [
+              "magnitude",
+              4320335220
+            ],
+            [
+              "normalize",
+              4320335304
+            ],
+            [
+              "cross",
+              4320335404
+            ],
+            [
+              "dot",
+              4320335520
+            ],
+            [
+              "angle",
+              4320335624
+            ],
+            [
+              "floor",
+              4320335888
+            ],
+            [
+              "ceil",
+              4320335956
+            ],
+            [
+              "abs",
+              4320336024
+            ],
+            [
+              "sign",
+              4320336092
+            ],
+            [
+              "clamp",
+              4320336196
+            ],
+            [
+              "max",
+              4320336512
+            ],
+            [
+              "min",
+              4320336684
+            ],
+            [
+              "lerp",
+              4320336856
+            ]
+          ]
+        ]
+      ],
+      "witnesses": []
+    },
+    "lib_entries": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "bit32": [
+          4409926664,
+          [
+            [
+              "arshift",
+              4320228716
+            ],
+            [
+              "band",
+              4320228852
+            ],
+            [
+              "bnot",
+              4320228900
+            ],
+            [
+              "bor",
+              4320228952
+            ],
+            [
+              "bxor",
+              4320229064
+            ],
+            [
+              "btest",
+              4320229176
+            ],
+            [
+              "extract",
+              4320229228
+            ],
+            [
+              "lrotate",
+              4320229328
+            ],
+            [
+              "lshift",
+              4320229408
+            ],
+            [
+              "replace",
+              4320229508
+            ],
+            [
+              "rrotate",
+              4320229648
+            ],
+            [
+              "rshift",
+              4320229736
+            ],
+            [
+              "countlz",
+              4320229836
+            ],
+            [
+              "countrz",
+              4320229908
+            ],
+            [
+              "byteswap",
+              4320229980
+            ]
+          ]
+        ],
+        "buffer": [
+          4409927384,
+          [
+            [
+              "create",
+              4320230616
+            ],
+            [
+              "fromstring",
+              4320230724
+            ],
+            [
+              "tostring",
+              4320230808
+            ],
+            [
+              "readi8",
+              4320230880
+            ],
+            [
+              "readu8",
+              4320231020
+            ],
+            [
+              "readi16",
+              4320231160
+            ],
+            [
+              "readu16",
+              4320231308
+            ],
+            [
+              "readi32",
+              4320231456
+            ],
+            [
+              "readu32",
+              4320231604
+            ],
+            [
+              "readf32",
+              4320231752
+            ],
+            [
+              "readf64",
+              4320231900
+            ],
+            [
+              "writei8",
+              4320232044
+            ],
+            [
+              "writeu8",
+              4320232196
+            ],
+            [
+              "writei16",
+              4320232348
+            ],
+            [
+              "writeu16",
+              4320232508
+            ],
+            [
+              "writei32",
+              4320232668
+            ],
+            [
+              "writeu32",
+              4320232828
+            ],
+            [
+              "writef32",
+              4320232988
+            ],
+            [
+              "writef64",
+              4320233152
+            ],
+            [
+              "readstring",
+              4320233312
+            ],
+            [
+              "writestring",
+              4320233528
+            ],
+            [
+              "len",
+              4320233820
+            ],
+            [
+              "copy",
+              4320233892
+            ],
+            [
+              "fill",
+              4320234212
+            ],
+            [
+              "readbits",
+              4320234444
+            ],
+            [
+              "writebits",
+              4320234748
+            ]
+          ]
+        ],
+        "coroutine": [
+          4409929912,
+          [
+            [
+              "create",
+              4320252100
+            ],
+            [
+              "running",
+              4320252168
+            ],
+            [
+              "status",
+              4320252216
+            ],
+            [
+              "wrap",
+              4320252344
+            ],
+            [
+              "yield",
+              4320252412
+            ],
+            [
+              "isyieldable",
+              4320252432
+            ],
+            [
+              "close",
+              4320252480
+            ]
+          ]
+        ],
+        "integer": [
+          4409930632,
+          [
+            [
+              "create",
+              4320284960
+            ],
+            [
+              "tonumber",
+              4320285064
+            ],
+            [
+              "neg",
+              4320285116
+            ],
+            [
+              "add",
+              4320285168
+            ],
+            [
+              "sub",
+              4320285236
+            ],
+            [
+              "mul",
+              4320285304
+            ],
+            [
+              "div",
+              4320285372
+            ],
+            [
+              "min",
+              4320285548
+            ],
+            [
+              "max",
+              4320285668
+            ],
+            [
+              "rem",
+              4320285788
+            ],
+            [
+              "idiv",
+              4320285940
+            ],
+            [
+              "udiv",
+              4320286136
+            ],
+            [
+              "urem",
+              4320286256
+            ],
+            [
+              "mod",
+              4320286380
+            ],
+            [
+              "clamp",
+              4320286548
+            ],
+            [
+              "band",
+              4320286712
+            ],
+            [
+              "bor",
+              4320286824
+            ],
+            [
+              "bnot",
+              4320286936
+            ],
+            [
+              "bxor",
+              4320286988
+            ],
+            [
+              "lt",
+              4320287100
+            ],
+            [
+              "le",
+              4320287172
+            ],
+            [
+              "ult",
+              4320287244
+            ],
+            [
+              "ule",
+              4320287316
+            ],
+            [
+              "gt",
+              4320287388
+            ],
+            [
+              "ge",
+              4320287460
+            ],
+            [
+              "ugt",
+              4320287532
+            ],
+            [
+              "uge",
+              4320287604
+            ],
+            [
+              "lshift",
+              4320287676
+            ],
+            [
+              "rshift",
+              4320287772
+            ],
+            [
+              "arshift",
+              4320287868
+            ],
+            [
+              "lrotate",
+              4320287976
+            ],
+            [
+              "rrotate",
+              4320288064
+            ],
+            [
+              "extract",
+              4320288152
+            ],
+            [
+              "replace",
+              4320288428
+            ],
+            [
+              "btest",
+              4320288732
+            ],
+            [
+              "countrz",
+              4320288848
+            ],
+            [
+              "countlz",
+              4320288904
+            ],
+            [
+              "bswap",
+              4320288956
+            ],
+            [
+              "fromstring",
+              4320289008
+            ]
+          ]
+        ],
+        "math": [
+          4409931272,
+          [
+            [
+              "abs",
+              4320289608
+            ],
+            [
+              "acos",
+              4320289660
+            ],
+            [
+              "asin",
+              4320289712
+            ],
+            [
+              "atan2",
+              4320289764
+            ],
+            [
+              "atan",
+              4320289848
+            ],
+            [
+              "ceil",
+              4320289900
+            ],
+            [
+              "cosh",
+              4320289952
+            ],
+            [
+              "cos",
+              4320290004
+            ],
+            [
+              "deg",
+              4320290056
+            ],
+            [
+              "exp",
+              4320290116
+            ],
+            [
+              "floor",
+              4320290168
+            ],
+            [
+              "fmod",
+              4320290220
+            ],
+            [
+              "frexp",
+              4320290304
+            ],
+            [
+              "ldexp",
+              4320290380
+            ],
+            [
+              "log10",
+              4320290460
+            ],
+            [
+              "log",
+              4320290512
+            ],
+            [
+              "max",
+              4320290692
+            ],
+            [
+              "min",
+              4320290824
+            ],
+            [
+              "modf",
+              4320290956
+            ],
+            [
+              "pow",
+              4320291048
+            ],
+            [
+              "rad",
+              4320291132
+            ],
+            [
+              "random",
+              4320291192
+            ],
+            [
+              "randomseed",
+              4320291744
+            ],
+            [
+              "sinh",
+              4320291832
+            ],
+            [
+              "sin",
+              4320291884
+            ],
+            [
+              "sqrt",
+              4320291936
+            ],
+            [
+              "tanh",
+              4320291988
+            ],
+            [
+              "tan",
+              4320292040
+            ],
+            [
+              "noise",
+              4320292092
+            ],
+            [
+              "clamp",
+              4320293136
+            ],
+            [
+              "sign",
+              4320293300
+            ],
+            [
+              "round",
+              4320293372
+            ],
+            [
+              "map",
+              4320293424
+            ],
+            [
+              "lerp",
+              4320293576
+            ],
+            [
+              "isnan",
+              4320293688
+            ],
+            [
+              "isinf",
+              4320293744
+            ],
+            [
+              "isfinite",
+              4320293812
+            ]
+          ]
+        ],
+        "os": [
+          4409931880,
+          [
+            [
+              "clock",
+              4320300168
+            ],
+            [
+              "date",
+              4320300212
+            ],
+            [
+              "difftime",
+              4320301076
+            ],
+            [
+              "time",
+              4320301156
+            ]
+          ]
+        ],
+        "string": [
+          4409931960,
+          [
+            [
+              "byte",
+              4320306104
+            ],
+            [
+              "char",
+              4320306388
+            ],
+            [
+              "find",
+              4320306628
+            ],
+            [
+              "format",
+              4320306636
+            ],
+            [
+              "gmatch",
+              4320308420
+            ],
+            [
+              "gsub",
+              4320308532
+            ],
+            [
+              "len",
+              4320309632
+            ],
+            [
+              "lower",
+              4320309696
+            ],
+            [
+              "match",
+              4320309880
+            ],
+            [
+              "rep",
+              4320309888
+            ],
+            [
+              "reverse",
+              4320310236
+            ],
+            [
+              "sub",
+              4320310404
+            ],
+            [
+              "upper",
+              4320310600
+            ],
+            [
+              "split",
+              4320310784
+            ],
+            [
+              "pack",
+              4320311096
+            ],
+            [
+              "packsize",
+              4320312288
+            ],
+            [
+              "unpack",
+              4320312560
+            ]
+          ]
+        ],
+        "table": [
+          4409932248,
+          [
+            [
+              "concat",
+              4320326136
+            ],
+            [
+              "foreach",
+              4320326464
+            ],
+            [
+              "foreachi",
+              4320326640
+            ],
+            [
+              "getn",
+              4320326840
+            ],
+            [
+              "maxn",
+              4320326908
+            ],
+            [
+              "insert",
+              4320327116
+            ],
+            [
+              "remove",
+              4320327336
+            ],
+            [
+              "sort",
+              4320327512
+            ],
+            [
+              "pack",
+              4320327700
+            ],
+            [
+              "unpack",
+              4320325776
+            ],
+            [
+              "move",
+              4320327868
+            ],
+            [
+              "create",
+              4320328256
+            ],
+            [
+              "find",
+              4320328452
+            ],
+            [
+              "clear",
+              4320328712
+            ],
+            [
+              "freeze",
+              4320328784
+            ],
+            [
+              "isfrozen",
+              4320328992
+            ],
+            [
+              "clone",
+              4320329060
+            ]
+          ]
+        ],
+        "utf8": [
+          4409932816,
+          [
+            [
+              "offset",
+              4320332568
+            ],
+            [
+              "codepoint",
+              4320333056
+            ],
+            [
+              "char",
+              4320333460
+            ],
+            [
+              "len",
+              4320333688
+            ],
+            [
+              "codes",
+              4320334052
+            ]
+          ]
+        ],
+        "vector": [
+          4409932912,
+          [
+            [
+              "create",
+              4320335096
+            ],
+            [
+              "magnitude",
+              4320335220
+            ],
+            [
+              "normalize",
+              4320335304
+            ],
+            [
+              "cross",
+              4320335404
+            ],
+            [
+              "dot",
+              4320335520
+            ],
+            [
+              "angle",
+              4320335624
+            ],
+            [
+              "floor",
+              4320335888
+            ],
+            [
+              "ceil",
+              4320335956
+            ],
+            [
+              "abs",
+              4320336024
+            ],
+            [
+              "sign",
+              4320336092
+            ],
+            [
+              "clamp",
+              4320336196
+            ],
+            [
+              "max",
+              4320336512
+            ],
+            [
+              "min",
+              4320336684
+            ],
+            [
+              "lerp",
+              4320336856
+            ]
+          ]
+        ]
+      },
+      "witnesses": []
+    },
+    "libs": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "bit32": {
+          "arshift": 4320228716,
+          "band": 4320228852,
+          "bnot": 4320228900,
+          "bor": 4320228952,
+          "btest": 4320229176,
+          "bxor": 4320229064,
+          "byteswap": 4320229980,
+          "countlz": 4320229836,
+          "countrz": 4320229908,
+          "extract": 4320229228,
+          "lrotate": 4320229328,
+          "lshift": 4320229408,
+          "replace": 4320229508,
+          "rrotate": 4320229648,
+          "rshift": 4320229736
+        },
+        "buffer": {
+          "copy": 4320233892,
+          "create": 4320230616,
+          "fill": 4320234212,
+          "fromstring": 4320230724,
+          "len": 4320233820,
+          "readbits": 4320234444,
+          "readf32": 4320231752,
+          "readf64": 4320231900,
+          "readi16": 4320231160,
+          "readi32": 4320231456,
+          "readi8": 4320230880,
+          "readstring": 4320233312,
+          "readu16": 4320231308,
+          "readu32": 4320231604,
+          "readu8": 4320231020,
+          "tostring": 4320230808,
+          "writebits": 4320234748,
+          "writef32": 4320232988,
+          "writef64": 4320233152,
+          "writei16": 4320232348,
+          "writei32": 4320232668,
+          "writei8": 4320232044,
+          "writestring": 4320233528,
+          "writeu16": 4320232508,
+          "writeu32": 4320232828,
+          "writeu8": 4320232196
+        },
+        "coroutine": {
+          "close": 4320252480,
+          "create": 4320252100,
+          "isyieldable": 4320252432,
+          "running": 4320252168,
+          "status": 4320252216,
+          "wrap": 4320252344,
+          "yield": 4320252412
+        },
+        "integer": {
+          "add": 4320285168,
+          "arshift": 4320287868,
+          "band": 4320286712,
+          "bnot": 4320286936,
+          "bor": 4320286824,
+          "bswap": 4320288956,
+          "btest": 4320288732,
+          "bxor": 4320286988,
+          "clamp": 4320286548,
+          "countlz": 4320288904,
+          "countrz": 4320288848,
+          "create": 4320284960,
+          "div": 4320285372,
+          "extract": 4320288152,
+          "fromstring": 4320289008,
+          "ge": 4320287460,
+          "gt": 4320287388,
+          "idiv": 4320285940,
+          "le": 4320287172,
+          "lrotate": 4320287976,
+          "lshift": 4320287676,
+          "lt": 4320287100,
+          "max": 4320285668,
+          "min": 4320285548,
+          "mod": 4320286380,
+          "mul": 4320285304,
+          "neg": 4320285116,
+          "rem": 4320285788,
+          "replace": 4320288428,
+          "rrotate": 4320288064,
+          "rshift": 4320287772,
+          "sub": 4320285236,
+          "tonumber": 4320285064,
+          "udiv": 4320286136,
+          "uge": 4320287604,
+          "ugt": 4320287532,
+          "ule": 4320287316,
+          "ult": 4320287244,
+          "urem": 4320286256
+        },
+        "math": {
+          "abs": 4320289608,
+          "acos": 4320289660,
+          "asin": 4320289712,
+          "atan": 4320289848,
+          "atan2": 4320289764,
+          "ceil": 4320289900,
+          "clamp": 4320293136,
+          "cos": 4320290004,
+          "cosh": 4320289952,
+          "deg": 4320290056,
+          "exp": 4320290116,
+          "floor": 4320290168,
+          "fmod": 4320290220,
+          "frexp": 4320290304,
+          "isfinite": 4320293812,
+          "isinf": 4320293744,
+          "isnan": 4320293688,
+          "ldexp": 4320290380,
+          "lerp": 4320293576,
+          "log": 4320290512,
+          "log10": 4320290460,
+          "map": 4320293424,
+          "max": 4320290692,
+          "min": 4320290824,
+          "modf": 4320290956,
+          "noise": 4320292092,
+          "pow": 4320291048,
+          "rad": 4320291132,
+          "random": 4320291192,
+          "randomseed": 4320291744,
+          "round": 4320293372,
+          "sign": 4320293300,
+          "sin": 4320291884,
+          "sinh": 4320291832,
+          "sqrt": 4320291936,
+          "tan": 4320292040,
+          "tanh": 4320291988
+        },
+        "os": {
+          "clock": 4320300168,
+          "date": 4320300212,
+          "difftime": 4320301076,
+          "time": 4320301156
+        },
+        "string": {
+          "byte": 4320306104,
+          "char": 4320306388,
+          "find": 4320306628,
+          "format": 4320306636,
+          "gmatch": 4320308420,
+          "gsub": 4320308532,
+          "len": 4320309632,
+          "lower": 4320309696,
+          "match": 4320309880,
+          "pack": 4320311096,
+          "packsize": 4320312288,
+          "rep": 4320309888,
+          "reverse": 4320310236,
+          "split": 4320310784,
+          "sub": 4320310404,
+          "unpack": 4320312560,
+          "upper": 4320310600
+        },
+        "table": {
+          "clear": 4320328712,
+          "clone": 4320329060,
+          "concat": 4320326136,
+          "create": 4320328256,
+          "find": 4320328452,
+          "foreach": 4320326464,
+          "foreachi": 4320326640,
+          "freeze": 4320328784,
+          "getn": 4320326840,
+          "insert": 4320327116,
+          "isfrozen": 4320328992,
+          "maxn": 4320326908,
+          "move": 4320327868,
+          "pack": 4320327700,
+          "remove": 4320327336,
+          "sort": 4320327512,
+          "unpack": 4320325776
+        },
+        "utf8": {
+          "char": 4320333460,
+          "codepoint": 4320333056,
+          "codes": 4320334052,
+          "len": 4320333688,
+          "offset": 4320332568
+        },
+        "vector": {
+          "abs": 4320336024,
+          "angle": 4320335624,
+          "ceil": 4320335956,
+          "clamp": 4320336196,
+          "create": 4320335096,
+          "cross": 4320335404,
+          "dot": 4320335520,
+          "floor": 4320335888,
+          "lerp": 4320336856,
+          "magnitude": 4320335220,
+          "max": 4320336512,
+          "min": 4320336684,
+          "normalize": 4320335304,
+          "sign": 4320336092
+        }
+      },
+      "witnesses": []
+    },
+    "luaB_print": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320226504,
+      "witnesses": []
+    },
+    "luaC_barrierback": {
+      "confidence": "single",
+      "method": "shared-write-barrier",
+      "value": 4320272960,
+      "witnesses": [
+        "shared-write-barrier"
+      ]
+    },
+    "luaD_call": {
+      "confidence": "single",
+      "method": "or-return-flag",
+      "value": 4320262664,
+      "witnesses": [
+        "or-return-flag"
+      ]
+    },
+    "luaD_growstack": {
+      "confidence": "single",
+      "method": "pushnil-stack-grow",
+      "value": 4320196604,
+      "witnesses": [
+        "pushnil-stack-grow"
+      ]
+    },
+    "luaD_pcall": {
+      "confidence": "single",
+      "method": "double-rawrunprotected",
+      "value": 4320265204,
+      "witnesses": [
+        "double-rawrunprotected"
+      ]
+    },
+    "luaD_rawrunprotected": {
+      "confidence": "single",
+      "method": "most-called-callee-of-lua_resume",
+      "value": 4320261288,
+      "witnesses": [
+        "most-called-callee-of-lua_resume"
+      ]
+    },
+    "luaF_newproto": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "func": 4320266580,
+        "size": 216,
+        "tag": 15
+      },
+      "witnesses": []
+    },
+    "luaG_readonlyerror": {
+      "confidence": "single",
+      "method": "setmetatable-and-clear",
+      "value": 4320257752,
+      "witnesses": [
+        "setmetatable-and-clear"
+      ]
+    },
+    "luaH_getn": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320323960,
+      "witnesses": []
+    },
+    "luaH_new": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320320912,
+      "witnesses": []
+    },
+    "luaH_next": {
+      "confidence": "single",
+      "method": "lua_next-delegate",
+      "value": 4320319612,
+      "witnesses": [
+        "lua_next-delegate"
+      ]
+    },
+    "luaL_argerror": {
+      "confidence": "single",
+      "method": "baselib:rawlen+select",
+      "value": 4320217528,
+      "witnesses": [
+        "baselib:rawlen+select"
+      ]
+    },
+    "luaL_checkany": {
+      "confidence": "single",
+      "method": "baselib:rawget+rawset+getmetatable+type",
+      "value": 4320219320,
+      "witnesses": [
+        "baselib:rawget+rawset+getmetatable+type"
+      ]
+    },
+    "luaL_checkinteger": {
+      "confidence": "single",
+      "method": "baselib:select",
+      "value": 4320219724,
+      "witnesses": [
+        "baselib:select"
+      ]
+    },
+    "luaL_checktype": {
+      "confidence": "single",
+      "method": "baselib:rawget+rawset+next+setfenv",
+      "value": 4320219248,
+      "witnesses": [
+        "baselib:rawget+rawset+next+setfenv"
+      ]
+    },
+    "luaL_errorL": {
+      "confidence": "single",
+      "method": "baselib:setmetatable+setfenv",
+      "value": 4320217784,
+      "witnesses": [
+        "baselib:setmetatable+setfenv"
+      ]
+    },
+    "luaL_getmetafield": {
+      "confidence": "single",
+      "method": "baselib:getmetatable+setmetatable",
+      "value": 4320220332,
+      "witnesses": [
+        "baselib:getmetatable+setmetatable"
+      ]
+    },
+    "luaL_optinteger": {
+      "confidence": "single",
+      "method": "baselib:error",
+      "value": 4320219868,
+      "witnesses": [
+        "baselib:error"
+      ]
+    },
+    "luaL_register": {
+      "confidence": "single",
+      "method": "shared-callee-of-10-luaopen",
+      "value": 4320220588,
+      "witnesses": [
+        "shared-callee-of-10-luaopen"
+      ]
+    },
+    "luaL_tolstring": {
+      "confidence": "single",
+      "method": "baselib:print",
+      "value": 4320223476,
+      "witnesses": [
+        "baselib:print"
+      ]
+    },
+    "luaL_typeerrorL": {
+      "confidence": "single",
+      "method": "baselib:setmetatable",
+      "value": 4320217860,
+      "witnesses": [
+        "baselib:setmetatable"
+      ]
+    },
+    "luaM_new": {
+      "confidence": "single",
+      "method": "shared-allocator",
+      "value": 4320294364,
+      "witnesses": [
+        "shared-allocator"
+      ]
+    },
+    "luaS_hash": {
+      "confidence": "single",
+      "method": "newlstr-hash",
+      "value": 4320304536,
+      "witnesses": [
+        "newlstr-hash"
+      ]
+    },
+    "luaS_newlstr": {
+      "confidence": "single",
+      "method": "pushlstring-allocator",
+      "value": 4320305300,
+      "witnesses": [
+        "pushlstring-allocator"
+      ]
+    },
+    "lua_call": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320263176,
+      "witnesses": []
+    },
+    "lua_createtable": {
+      "confidence": "single",
+      "method": "table.create-table-tag",
+      "value": 4320207256,
+      "witnesses": [
+        "table.create-table-tag"
+      ]
+    },
+    "lua_error": {
+      "confidence": "single",
+      "method": "baselib:error",
+      "value": 4320196796,
+      "witnesses": [
+        "baselib:error"
+      ]
+    },
+    "lua_getfenv": {
+      "confidence": "single",
+      "method": "baselib:getfenv",
+      "value": 4320208152,
+      "witnesses": [
+        "baselib:getfenv"
+      ]
+    },
+    "lua_getmetatable": {
+      "confidence": "single",
+      "method": "baselib:getmetatable",
+      "value": 4320207800,
+      "witnesses": [
+        "baselib:getmetatable"
+      ]
+    },
+    "lua_getreadonly": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320207588,
+      "witnesses": []
+    },
+    "lua_getthreaddata": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "callers": 176,
+        "func": 4320211016,
+        "userdata": 40
+      },
+      "witnesses": []
+    },
+    "lua_gettop": {
+      "confidence": "single",
+      "method": "baselib:select+print",
+      "value": 4320197804,
+      "witnesses": [
+        "baselib:select+print"
+      ]
+    },
+    "lua_insert": {
+      "confidence": "single",
+      "method": "baselib:setfenv",
+      "value": 4320198312,
+      "witnesses": [
+        "baselib:setfenv"
+      ]
+    },
+    "lua_iscfunction": {
+      "confidence": "single",
+      "method": "baselib:getfenv+setfenv",
+      "value": 4320199200,
+      "witnesses": [
+        "baselib:getfenv+setfenv"
+      ]
+    },
+    "lua_isnumber": {
+      "confidence": "single",
+      "method": "baselib:setfenv",
+      "value": 4320199448,
+      "witnesses": [
+        "baselib:setfenv"
+      ]
+    },
+    "lua_newthread": {
+      "confidence": "single",
+      "method": "coroutine.create-thread-tag",
+      "value": 4320197520,
+      "witnesses": [
+        "coroutine.create-thread-tag"
+      ]
+    },
+    "lua_newuserdatatagged": {
+      "confidence": "single",
+      "method": "newproxy-userdata-tag",
+      "value": 4320212576,
+      "witnesses": [
+        "newproxy-userdata-tag"
+      ]
+    },
+    "lua_next": {
+      "confidence": "single",
+      "method": "baselib:next",
+      "value": 4320211604,
+      "witnesses": [
+        "baselib:next"
+      ]
+    },
+    "lua_objlen": {
+      "confidence": "single",
+      "method": "baselib:rawlen",
+      "value": 4320202192,
+      "witnesses": [
+        "baselib:rawlen"
+      ]
+    },
+    "lua_pcall": {
+      "confidence": "single",
+      "method": "pcall-errfunc-index2addr",
+      "value": 4320210364,
+      "witnesses": [
+        "pcall-errfunc-index2addr"
+      ]
+    },
+    "lua_pushboolean": {
+      "confidence": "single",
+      "method": "isfrozen-result-push",
+      "value": 4320205316,
+      "witnesses": [
+        "isfrozen-result-push"
+      ]
+    },
+    "lua_pushcclosurek": {
+      "confidence": "single",
+      "method": "register-xor-closure",
+      "value": 4320204980,
+      "witnesses": [
+        "register-xor-closure"
+      ]
+    },
+    "lua_pushinteger": {
+      "confidence": "single",
+      "method": "baselib:rawlen+select",
+      "value": 4320203892,
+      "witnesses": [
+        "baselib:rawlen+select"
+      ]
+    },
+    "lua_pushlstring": {
+      "confidence": "single",
+      "method": "pushstring-delegate",
+      "value": 4320204468,
+      "witnesses": [
+        "pushstring-delegate"
+      ]
+    },
+    "lua_pushnil": {
+      "confidence": "single",
+      "method": "baselib:getmetatable+next",
+      "value": 4320203628,
+      "witnesses": [
+        "baselib:getmetatable+next"
+      ]
+    },
+    "lua_pushstring": {
+      "confidence": "single",
+      "method": "baselib:type",
+      "value": 4320204684,
+      "witnesses": [
+        "baselib:type"
+      ]
+    },
+    "lua_pushthread": {
+      "confidence": "single",
+      "method": "setfenv-thread-tag",
+      "value": 4320205608,
+      "witnesses": [
+        "setfenv-thread-tag"
+      ]
+    },
+    "lua_pushvalue": {
+      "confidence": "single",
+      "method": "baselib:getfenv+setfenv+error",
+      "value": 4320198812,
+      "witnesses": [
+        "baselib:getfenv+setfenv+error"
+      ]
+    },
+    "lua_rawget": {
+      "confidence": "single",
+      "method": "baselib:rawget",
+      "value": 4320206548,
+      "witnesses": [
+        "baselib:rawget"
+      ]
+    },
+    "lua_rawset": {
+      "confidence": "single",
+      "method": "baselib:rawset",
+      "value": 4320209028,
+      "witnesses": [
+        "baselib:rawset"
+      ]
+    },
+    "lua_ref": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320214228,
+      "witnesses": []
+    },
+    "lua_resume": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320263492,
+      "witnesses": []
+    },
+    "lua_resumeerror": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320264384,
+      "witnesses": []
+    },
+    "lua_setfenv": {
+      "confidence": "single",
+      "method": "baselib:setfenv",
+      "value": 4320209992,
+      "witnesses": [
+        "baselib:setfenv"
+      ]
+    },
+    "lua_setmetatable": {
+      "confidence": "single",
+      "method": "baselib:setmetatable",
+      "value": 4320209724,
+      "witnesses": [
+        "baselib:setmetatable"
+      ]
+    },
+    "lua_setreadonly": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320207472,
+      "witnesses": []
+    },
+    "lua_setsafeenv": {
+      "confidence": "single",
+      "method": "baselib:getfenv+setfenv",
+      "value": 4320207684,
+      "witnesses": [
+        "baselib:getfenv+setfenv"
+      ]
+    },
+    "lua_settop": {
+      "confidence": "single",
+      "method": "baselib:rawget+rawset+next+error",
+      "value": 4320197824,
+      "witnesses": [
+        "baselib:rawget+rawset+next+error"
+      ]
+    },
+    "lua_setuserdatametamethods": {
+      "confidence": "single",
+      "method": "instance-metamethod-registration",
+      "value": 4320215776,
+      "witnesses": [
+        "instance-metamethod-registration"
+      ]
+    },
+    "lua_state.base": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 104,
+      "witnesses": []
+    },
+    "lua_state.base_ci": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 56,
+      "witnesses": []
+    },
+    "lua_state.ci": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 72,
+      "witnesses": []
+    },
+    "lua_state.end_ci": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 48,
+      "witnesses": []
+    },
+    "lua_state.gclist": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 8,
+      "witnesses": []
+    },
+    "lua_state.global": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 96,
+      "witnesses": []
+    },
+    "lua_state.gt": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 16,
+      "witnesses": []
+    },
+    "lua_state.isactive": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 6,
+      "witnesses": []
+    },
+    "lua_state.marked": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 1,
+      "witnesses": []
+    },
+    "lua_state.ncalls": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 120,
+      "witnesses": []
+    },
+    "lua_state.singlestep": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 5,
+      "witnesses": []
+    },
+    "lua_state.stack": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 88,
+      "witnesses": []
+    },
+    "lua_state.stack_last": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 64,
+      "witnesses": []
+    },
+    "lua_state.stacksize_encoded": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 32,
+      "witnesses": []
+    },
+    "lua_state.status": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 3,
+      "witnesses": []
+    },
+    "lua_state.top": {
+      "confidence": "corroborated",
+      "method": "vote",
+      "value": 80,
+      "witnesses": [
+        "lua_gettop",
+        "lua_call"
+      ]
+    },
+    "lua_state.userdata": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 40,
+      "witnesses": []
+    },
+    "lua_tolstring": {
+      "confidence": "single",
+      "method": "baselib:select",
+      "value": 4320201200,
+      "witnesses": [
+        "baselib:select"
+      ]
+    },
+    "lua_touserdatatagged": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320202868,
+      "witnesses": []
+    },
+    "lua_type": {
+      "confidence": "single",
+      "method": "baselib:rawlen+setmetatable+select+type",
+      "value": 4320199048,
+      "witnesses": [
+        "baselib:rawlen+setmetatable+select+type"
+      ]
+    },
+    "lua_typename": {
+      "confidence": "single",
+      "method": "baselib:type",
+      "value": 4320199164,
+      "witnesses": [
+        "baselib:type"
+      ]
+    },
+    "lua_unref": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320214864,
+      "witnesses": []
+    },
+    "lua_xpush": {
+      "confidence": "single",
+      "method": "coroutine.create-transfer",
+      "value": 4320197272,
+      "witnesses": [
+        "coroutine.create-transfer"
+      ]
+    },
+    "luaopen": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "bit32": 4320228676,
+        "buffer": 4320230548,
+        "coroutine": 4320251680,
+        "integer": 4320284844,
+        "math": 4320289224,
+        "os": 4320300128,
+        "string": 4320305936,
+        "table": 4320325672,
+        "utf8": 4320332476,
+        "vector": 4320334816
+      },
+      "witnesses": []
+    },
+    "luatable.aboundary": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 12,
+      "witnesses": []
+    },
+    "luatable.array": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 24,
+      "witnesses": []
+    },
+    "luatable.metatable": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 32,
+      "witnesses": []
+    },
+    "luatable.node": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 40,
+      "witnesses": []
+    },
+    "luatable.readonly": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 6,
+      "witnesses": []
+    },
+    "luatable.size": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 48,
+      "witnesses": []
+    },
+    "luatable.sizearray": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 8,
+      "witnesses": []
+    },
+    "luau_execute": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4320352480,
+      "witnesses": []
+    },
+    "luau_execute_variants": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "fast": 4320370232,
+        "singlestep": 4320352500
+      },
+      "witnesses": []
+    },
+    "luau_load": {
+      "confidence": "single",
+      "method": "bytecode-version-string",
+      "value": 4320337852,
+      "witnesses": [
+        "bytecode-version-string"
+      ]
+    },
+    "luau_precall": {
+      "confidence": "single",
+      "method": "luaD_call-delegate",
+      "value": 4320388200,
+      "witnesses": [
+        "luaD_call-delegate"
+      ]
+    },
+    "proto.capabilities": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 72,
+      "witnesses": []
+    },
+    "proto.code": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 40,
+      "witnesses": []
+    },
+    "proto.execdata": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 104,
+      "witnesses": []
+    },
+    "proto.is_vararg": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 7,
+      "witnesses": []
+    },
+    "proto.k": {
+      "confidence": "single",
+      "method": "interpreter-prologue-double-deref",
+      "value": 32,
+      "witnesses": [
+        "interpreter-prologue-double-deref"
+      ]
+    },
+    "proto.maxstacksize": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4,
+      "witnesses": []
+    },
+    "proto.nativeentry": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 112,
+      "witnesses": []
+    },
+    "proto.numparams": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 6,
+      "witnesses": []
+    },
+    "proto.size": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 216,
+      "witnesses": []
+    },
+    "proto_layout": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "code": 40,
+        "execdata": 104,
+        "is_vararg": 7,
+        "maxstacksize": 4,
+        "nativeentry": 112,
+        "numparams": 6
+      },
+      "witnesses": []
+    },
+    "proto_written_fields": {
+      "confidence": "single",
+      "method": "direct",
+      "value": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        16,
+        32,
+        40,
+        48,
+        64,
+        80,
+        88,
+        96,
+        120,
+        128,
+        136,
+        140,
+        144,
+        148,
+        152,
+        156,
+        160,
+        164,
+        168,
+        172,
+        176,
+        188
+      ],
+      "witnesses": []
+    },
+    "pseudo_index_layout": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "global": 96,
+        "gt": 16,
+        "nupvalues": 5,
+        "registry": 1216,
+        "scratch": 1200,
+        "upvals": 48
+      },
+      "witnesses": []
+    },
+    "readonly_pair": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "lua_getreadonly": 4320207588,
+        "lua_setreadonly": 4320207472,
+        "readonly": 6
+      },
+      "witnesses": []
+    },
+    "ref_pair": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "freelist": 1232,
+        "lua_ref": 4320214228,
+        "lua_unref": 4320214864,
+        "table": 1216
+      },
+      "witnesses": []
+    },
+    "resume_pair": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "lua_resume": 4320263492,
+        "lua_resumeerror": 4320264384
+      },
+      "witnesses": []
+    },
+    "resume_prepare": {
+      "confidence": "single",
+      "method": "resume-string",
+      "value": 4320263596,
+      "witnesses": [
+        "resume-string"
+      ]
+    },
+    "script_resume": {
+      "confidence": "single",
+      "method": "engine-side-resume",
+      "value": 4297244824,
+      "witnesses": [
+        "engine-side-resume"
+      ]
+    },
+    "stack_geometry": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "base": 104,
+        "top": 80
+      },
+      "witnesses": []
+    },
+    "state_stack_layout": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "end_ci": 48,
+        "stack_last": 64,
+        "stacksize_encoded": 32
+      },
+      "witnesses": []
+    },
+    "string_length_fields": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "luaH_getn": 4320323960,
+        "tstring": 20,
+        "udata": 4
+      },
+      "witnesses": []
+    },
+    "string_table": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "hash": 0,
+        "size": 8
+      },
+      "witnesses": []
+    },
+    "table_layout": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "aboundary": 12,
+        "array": 24,
+        "metatable": 32,
+        "node": 40,
+        "size": 48,
+        "sizearray": 8
+      },
+      "witnesses": []
+    },
+    "table_tag": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 7,
+      "witnesses": []
+    },
+    "tagged_type_globals": {
+      "confidence": "single",
+      "method": "direct",
+      "value": [
+        4414668600,
+        4414668616,
+        4414668632,
+        4414668648,
+        4414668664,
+        4414668680,
+        4414668696,
+        4414668712,
+        4414668728,
+        4414668744,
+        4414668760,
+        4414668776,
+        4414668792,
+        4414668808,
+        4414668824,
+        4414668840,
+        4414668856,
+        4414668872,
+        4414668888,
+        4414668904,
+        4414668920,
+        4414668936,
+        4414668952,
+        4414668968,
+        4414668984,
+        4414669000,
+        4414669016,
+        4414669032,
+        4414669048,
+        4414669064,
+        4414669080,
+        4414669096,
+        4414669112,
+        4414669128,
+        4414669144,
+        4414669160,
+        4414669176,
+        4414669192,
+        4414669208,
+        4414669224,
+        4414669240,
+        4414671320,
+        4414671336,
+        4414671352,
+        4414671368,
+        4414671384,
+        4414671400,
+        4414671416,
+        4414671432,
+        4414671448,
+        4414671464,
+        4414671480,
+        4414671496,
+        4414671512,
+        4414671528,
+        4414671544,
+        4414671560,
+        4414678360,
+        4414678376,
+        4414688288,
+        4414688304,
+        4414688480,
+        4414691752,
+        4414691864,
+        4414890640
+      ],
+      "witnesses": []
+    },
+    "tagged_userdata": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "data": 16,
+        "func": 4320202868,
+        "tag": 3
+      },
+      "witnesses": []
+    },
+    "thread_capabilities": {
+      "confidence": "single",
+      "method": "extra-space-capability-read",
+      "value": 4297151880,
+      "witnesses": [
+        "extra-space-capability-read"
+      ]
+    },
+    "thread_tag": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 10,
+      "witnesses": []
+    },
+    "tstring.atom": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4,
+      "witnesses": []
+    },
+    "tstring.data": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 24,
+      "witnesses": []
+    },
+    "tstring.hash": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 16,
+      "witnesses": []
+    },
+    "tstring.len": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 20,
+      "witnesses": []
+    },
+    "tstring_layout": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "atom": 4,
+        "data": 24,
+        "hash": 16,
+        "len": 20,
+        "next": 8
+      },
+      "witnesses": []
+    },
+    "tvalue.tt": {
+      "confidence": "single",
+      "method": "vote",
+      "value": 12,
+      "witnesses": [
+        "lua_pushnil"
+      ]
+    },
+    "type_tags": {
+      "confidence": "single",
+      "method": "direct",
+      "value": {
+        "boolean": 1,
+        "buffer": 11,
+        "function": 8,
+        "integer": 4,
+        "lightuserdata": 2,
+        "nil": 0,
+        "number": 3,
+        "string": 6,
+        "table": 7,
+        "thread": 10,
+        "userdata": 9,
+        "vector": 5
+      },
+      "witnesses": []
+    },
+    "typenames": {
+      "confidence": "single",
+      "method": "direct",
+      "value": [
+        "nil",
+        "boolean",
+        "userdata",
+        "number",
+        "integer",
+        "vector",
+        "string",
+        "table",
+        "function",
+        "userdata",
+        "thread",
+        "buffer"
+      ],
+      "witnesses": []
+    },
+    "udata.data": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 16,
+      "witnesses": []
+    },
+    "udata.len": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 4,
+      "witnesses": []
+    },
+    "udata.metatable": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 8,
+      "witnesses": []
+    },
+    "udata.tag": {
+      "confidence": "single",
+      "method": "direct",
+      "value": 3,
+      "witnesses": []
+    },
+    "unsandboxed_capabilities": {
+      "confidence": "single",
+      "method": "vote",
+      "value": 18014398509481728,
+      "witnesses": [
+        "0x1002644b4"
+      ]
+    },
+    "vm_span": {
+      "confidence": "single",
+      "method": "direct",
+      "value": [
+        4319961992,
+        4320599000
+      ],
+      "witnesses": []
+    }
+  },
+  "invariants": {
+    "failed": [],
+    "passed": [
+      "pointer fields are aligned and distinct",
+      "byte fields fit in the gc header word",
+      "tvalue tag lies inside a 16 byte value",
+      "call info fields fit the measured stride",
+      "type tags are contiguous from nil",
+      "capability masks are distinct single bits",
+      "unsandboxed mask covers the capability table",
+      "closure fields are ordered and aligned",
+      "interpreter variants are distinct and large",
+      "no two api roles resolved to the same function",
+      "api functions live inside the vm span",
+      "base library is fully populated",
+      "userdata layout is self consistent",
+      "table and string header fields are in range",
+      "instance bridge points into the image",
+      "registry and ref freelist are distinct global fields",
+      "table layout fits its allocation",
+      "string header fields are ordered",
+      "proto capability field lies inside the proto",
+      "global state fields are distinct",
+      "thread capability reader agrees with the write site"
+    ],
+    "skipped": []
+  },
+  "meta": {
+    "build": "7310942",
+    "generated_from": "RobloxPlayer",
+    "image_base": 4294967296,
+    "input": "/Users/berkay/re/roblox/7310942/RobloxPlayer",
+    "platform": "darwin-ARM",
+    "sha256": "981b65d66fc0c23c6119f1723b910de54a798ca18b1f270a0f53ed0dd122b3ed"
+  }
+}
