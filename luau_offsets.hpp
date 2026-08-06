@@ -5,11 +5,22 @@
 
 namespace rbx {
 
-inline constexpr char build[] = "7310942";
+inline constexpr char build[] = "7330989";
+inline constexpr char version[] = "0.733.0.7330989";
 inline constexpr char platform[] = "darwin-ARM";
-inline constexpr char sha256[] = "981b65d66fc0c23c6119f1723b910de54a798ca18b1f270a0f53ed0dd122b3ed";
+inline constexpr char sha256[] = "023659acbe36dec3b41503da5db5c37e70b995fbee1e2bf13f80893a0d3207cd";
 inline constexpr char generated_from[] = "RobloxPlayer";
 inline constexpr std::uintptr_t linked_image_base = 0x100000000;
+
+namespace enc {
+    inline constexpr int raw = 0, sub = 1, xor_ = 2, rsub = 3, add = 4;
+}
+
+namespace extra {
+    inline constexpr std::size_t identity = 0x80;
+    inline constexpr std::size_t asset_id = 0x88;
+    inline constexpr std::size_t capabilities = 0x90;
+}
 
 enum class lua_type : std::int32_t {
     none = -1,
@@ -25,6 +36,8 @@ enum class lua_type : std::int32_t {
     userdata = 9,
     thread = 10,
     buffer = 11,
+    proto = 15,
+    upval = 16,
 };
 
 enum class capability : std::uint64_t {
@@ -83,33 +96,39 @@ enum class capability : std::uint64_t {
 };
 
 inline constexpr std::uint64_t unsandboxed_capabilities = 0x003FFFFFFFFFFF00;
+inline constexpr std::uint64_t full_capabilities = ~0ull;
 inline constexpr std::uint64_t defined_capabilities = 0x003FFFFFFFFF8B00;
 
 namespace lua_state {
+    inline constexpr std::size_t tt = 0x0;
     inline constexpr std::size_t marked = 0x1;
+    inline constexpr std::size_t memcat = 0x2;
     inline constexpr std::size_t status = 0x3;
-    inline constexpr std::size_t singlestep = 0x5;
-    inline constexpr std::size_t isactive = 0x6;
-    inline constexpr std::size_t gclist = 0x8;
-    inline constexpr std::size_t gt = 0x10;
-    inline constexpr std::size_t stacksize_encoded = 0x20;
-    inline constexpr std::size_t userdata = 0x28;
-    inline constexpr std::size_t end_ci = 0x30;
-    inline constexpr std::size_t base_ci = 0x38;
-    inline constexpr std::size_t stack_last = 0x40;
-    inline constexpr std::size_t ci = 0x48;
-    inline constexpr std::size_t top = 0x50;
-    inline constexpr std::size_t stack = 0x58;
-    inline constexpr std::size_t global = 0x60;
-    inline constexpr std::size_t base = 0x68;
-    inline constexpr std::size_t ncalls = 0x78;
+    inline constexpr std::size_t singlestep = 0x4;
+    inline constexpr std::size_t isactive = 0x5;
+    inline constexpr std::size_t active_memcat = 0x6;
+    inline constexpr std::size_t gt = 0x8;
+    inline constexpr std::size_t end_ci = 0x10;
+    inline constexpr std::size_t base_ci = 0x18;
+    inline constexpr std::size_t userdata = 0x20;
+    inline constexpr std::size_t ncalls = 0x30;
+    inline constexpr std::size_t base_ncalls = 0x32;
+    inline constexpr std::size_t gclist = 0x38;
+    inline constexpr std::size_t openupval = 0x28;
+    inline constexpr std::size_t size_ci = 0x44;
+    inline constexpr std::size_t top = 0x48;
+    inline constexpr std::size_t stack = 0x50;
+    inline constexpr std::size_t ci = 0x58;
+    inline constexpr std::size_t base = 0x60;
+    inline constexpr std::size_t stack_last = 0x68;
+    inline constexpr std::size_t global = 0x70;
+    inline constexpr std::size_t size = 0x80;
 }
 
 namespace call_info {
     inline constexpr std::size_t top = 0x0;
-    inline constexpr std::size_t func = 0x8;
-    inline constexpr std::size_t cached = 0x10;
-    inline constexpr std::size_t base = 0x18;
+    inline constexpr std::size_t base = 0x10;
+    inline constexpr std::size_t func = 0x18;
     inline constexpr std::size_t savedpc = 0x20;
     inline constexpr std::size_t nresults = 0x28;
     inline constexpr std::size_t flags = 0x2c;
@@ -120,13 +139,33 @@ namespace tvalue {
     inline constexpr std::size_t tt = 0xc;
 }
 
+namespace security_context {
+    inline constexpr std::size_t identity     = 0;
+    inline constexpr std::size_t asset_id     = 1;
+    inline constexpr std::size_t capabilities = 5;
+    inline constexpr std::size_t resolver     = 6;
+}
+
 namespace closure {
+    inline constexpr std::size_t is_c = 0x3;
+    inline constexpr std::size_t stacksize = 0x4;
     inline constexpr std::size_t nupvalues = 0x5;
     inline constexpr std::size_t proto = 0x18;
     inline constexpr std::size_t fn = 0x18;
-    inline constexpr std::size_t cont = 0x20;
+    inline constexpr std::size_t cont = 0x30;
     inline constexpr std::size_t debugname = 0x28;
-    inline constexpr std::size_t upvals = 0x30;
+    inline constexpr int debugname_scheme = enc::xor_;
+    inline constexpr std::size_t upvals = 0x38;
+    inline constexpr std::size_t env = 0x10;
+    inline constexpr std::size_t lupvals = 0x20;
+    inline constexpr int fn_scheme = enc::raw;
+    inline constexpr int cont_scheme = enc::add;
+}
+
+namespace upval {
+    inline constexpr std::size_t v = 0x8;
+    inline constexpr std::size_t value = 0x10;
+    inline constexpr std::size_t size = 0x28;
 }
 
 namespace udata {
@@ -144,126 +183,285 @@ namespace tstring {
 }
 
 namespace luatable {
-    inline constexpr std::size_t readonly = 0x6;
+    inline constexpr std::size_t tt = 0x0;
+    inline constexpr std::size_t marked = 0x1;
+    inline constexpr std::size_t memcat = 0x2;
+    inline constexpr std::size_t lsizenode = 0x4;
+    inline constexpr std::size_t readonly = 0x5;
+    inline constexpr std::size_t tmcache = 0x7;
     inline constexpr std::size_t sizearray = 0x8;
-    inline constexpr std::size_t aboundary = 0xc;
+    inline constexpr std::size_t node = 0x10;
     inline constexpr std::size_t array = 0x18;
-    inline constexpr std::size_t metatable = 0x20;
-    inline constexpr std::size_t node = 0x28;
+    inline constexpr std::size_t gclist = 0x20;
+    inline constexpr std::size_t metatable = 0x28;
     inline constexpr std::size_t size = 0x30;
 }
 
 namespace proto {
-    inline constexpr std::size_t maxstacksize = 0x4;
-    inline constexpr std::size_t numparams = 0x6;
-    inline constexpr std::size_t is_vararg = 0x7;
-    inline constexpr std::size_t k = 0x20;
-    inline constexpr std::size_t code = 0x28;
-    inline constexpr std::size_t capabilities = 0x48;
-    inline constexpr std::size_t execdata = 0x68;
-    inline constexpr std::size_t nativeentry = 0x70;
+    inline constexpr std::size_t tt = 0x0;
+    inline constexpr std::size_t marked = 0x1;
+    inline constexpr std::size_t memcat = 0x2;
+    inline constexpr std::size_t is_vararg = 0x3;
+    inline constexpr std::size_t numparams = 0x4;
+    inline constexpr std::size_t nups = 0x5;
+    inline constexpr std::size_t flags = 0x6;
+    inline constexpr std::size_t maxstacksize = 0x7;
+    inline constexpr std::size_t userdata = 0x8;
+    inline constexpr std::size_t p = 0x18;
+    inline constexpr int p_scheme = enc::raw;
+    inline constexpr std::size_t upvalues = 0x20;
+    inline constexpr int upvalues_scheme = enc::sub;
+    inline constexpr std::size_t source = 0x28;
+    inline constexpr int source_scheme = enc::add;
+    inline constexpr std::size_t capabilities = 0x30;
+    inline constexpr int capabilities_scheme = enc::sub;
+    inline constexpr std::size_t codeentry = 0x38;
+    inline constexpr std::size_t debuginsn = 0x40;
+    inline constexpr int debuginsn_scheme = enc::add;
+    inline constexpr std::size_t gclist = 0x48;
+    inline constexpr std::size_t k = 0x50;
+    inline constexpr std::size_t code = 0x58;
+    inline constexpr std::size_t abslineinfo = 0x60;
+    inline constexpr int abslineinfo_scheme = enc::xor_;
+    inline constexpr std::size_t locvars = 0x68;
+    inline constexpr int locvars_scheme = enc::add;
+    inline constexpr std::size_t debugname = 0x70;
+    inline constexpr int debugname_scheme = enc::sub;
+    inline constexpr std::size_t typeinfo = 0x78;
+    inline constexpr int typeinfo_scheme = enc::add;
+    inline constexpr std::size_t lineinfo = 0x80;
+    inline constexpr int lineinfo_scheme = enc::sub;
+    inline constexpr std::size_t sizek = 0x8c;
+    inline constexpr std::size_t sizelocvars = 0x94;
+    inline constexpr std::size_t sizep = 0x98;
+    inline constexpr std::size_t sizecode = 0x9c;
+    inline constexpr std::size_t linegaplog2 = 0xa0;
+    inline constexpr std::size_t sizelineinfo = 0xa4;
+    inline constexpr std::size_t sizeupvalues = 0xa8;
+    inline constexpr std::size_t sizetypeinfo = 0xac;
+    inline constexpr std::size_t bytecode_capabilities = 0xd0;
     inline constexpr std::size_t size = 0xd8;
 }
 
 namespace global_state {
+    inline constexpr std::size_t strt_hash = 0x0;
     inline constexpr std::size_t strt_size = 0x8;
-    inline constexpr std::size_t gc_threshold = 0x10;
-    inline constexpr std::size_t total_bytes = 0x18;
-    inline constexpr std::size_t mainthread = 0x1a0;
-    inline constexpr std::size_t mt = 0x328;
-    inline constexpr std::size_t scratch = 0x4b0;
-    inline constexpr std::size_t registry = 0x4c0;
-    inline constexpr std::size_t ref_freelist = 0x4d0;
+    inline constexpr std::size_t strt_nuse = 0xc;
+    inline constexpr std::size_t currentwhite = 0x10;
+    inline constexpr std::uint8_t white_bits = 0x3;
+    inline constexpr std::size_t gc_threshold = 0x50;
+    inline constexpr std::size_t total_bytes = 0x58;
+    inline constexpr std::size_t freepages = 0x1a8;
+    inline constexpr std::size_t allpages = 0x320;
+    inline constexpr std::size_t mt = 0x440;
 }
 
-namespace extra_space {
-    inline constexpr std::size_t capabilities = 0x40;
+namespace task_scheduler {
+    inline constexpr std::size_t use_frame_time = 0x8;
+    inline constexpr std::size_t frame_time = 0xb8;
+    inline constexpr int max_target_fps = 240;
+}
+
+namespace page {
+    inline constexpr std::size_t prev = 0x0;
+    inline constexpr std::size_t next = 0x8;
+    inline constexpr std::size_t page_size = 0x20;
+    inline constexpr std::size_t block_size = 0x24;
+    inline constexpr std::size_t free_list = 0x28;
+    inline constexpr std::size_t free_next = 0x30;
+    inline constexpr std::size_t busy_blocks = 0x34;
+    inline constexpr std::size_t data = 0x40;
+}
+
+namespace instance_obj {
+    inline constexpr std::size_t class_descriptor = 0x18;
+    inline constexpr std::size_t parent = 0x68;
+}
+
+namespace class_descriptor {
+    inline constexpr std::size_t member_map = 0x1d8;
+}
+
+namespace member_entry {
+    inline constexpr std::size_t descriptor = 0x0;
+    inline constexpr std::size_t kind = 0x8;
+}
+
+namespace member_kind {
+    inline constexpr int property = 0;
+    inline constexpr int event = 1;
+    inline constexpr int function = 2;
+    inline constexpr int yield_function = 3;
+    inline constexpr int callback = 4;
+}
+
+namespace property_descriptor {
+    inline constexpr std::size_t name = 0x8;
+    inline constexpr std::size_t flags = 0x8b;
+    inline constexpr std::uint16_t flag_scriptable = 0x10;
+}
+
+namespace layout {
+
+template <std::size_t N>
+inline constexpr bool distinct(const std::size_t (&v)[N]) noexcept {
+    for (std::size_t i = 0; i < N; ++i)
+        for (std::size_t j = i + 1; j < N; ++j)
+            if (v[i] == v[j]) return false;
+    return true;
+}
+
+inline constexpr std::size_t lua_state_fields[]{
+    lua_state::marked, lua_state::tt, lua_state::memcat, lua_state::status,
+    lua_state::singlestep, lua_state::active_memcat, lua_state::isactive,
+    lua_state::ncalls, lua_state::base_ncalls, lua_state::gclist,
+    lua_state::global, lua_state::top, lua_state::stack, lua_state::base,
+    lua_state::ci, lua_state::stack_last, lua_state::end_ci, lua_state::base_ci,
+    lua_state::openupval, lua_state::size_ci, lua_state::userdata, lua_state::gt,
+};
+
+inline constexpr std::size_t call_info_fields[]{
+    call_info::base, call_info::func, call_info::top, call_info::savedpc,
+    call_info::nresults, call_info::flags,
+};
+
+inline constexpr std::size_t proto_fields[]{
+    proto::tt, proto::nups, proto::is_vararg, proto::numparams, proto::flags,
+    proto::maxstacksize, proto::debugname, proto::lineinfo, proto::codeentry,
+    proto::upvalues, proto::locvars, proto::k, proto::code, proto::source,
+    proto::p, proto::abslineinfo, proto::debuginsn, proto::sizelineinfo,
+    proto::sizep, proto::sizecode, proto::linegaplog2, proto::sizek,
+    proto::sizelocvars, proto::sizeupvalues, proto::typeinfo,
+    proto::sizetypeinfo, proto::capabilities, proto::bytecode_capabilities,
+};
+
+inline constexpr std::size_t luatable_fields[]{
+    luatable::marked, luatable::tt, luatable::readonly, luatable::tmcache,
+    luatable::metatable, luatable::node,
+};
+
+inline constexpr std::size_t udata_fields[]{
+    udata::tag, udata::len, udata::metatable, udata::data,
+};
+
+inline constexpr std::size_t tstring_fields[]{
+    tstring::atom, tstring::hash, tstring::len, tstring::data,
+};
+
+static_assert(distinct(lua_state_fields));
+static_assert(distinct(call_info_fields));
+static_assert(distinct(proto_fields));
+static_assert(distinct(luatable_fields));
+static_assert(distinct(udata_fields));
+static_assert(distinct(tstring_fields));
+
+static_assert(proto::capabilities + sizeof(std::uint64_t) <= proto::size);
+static_assert(lua_state::gt + sizeof(void*) <= lua_state::size);
+static_assert(lua_state::global + sizeof(void*) <= lua_state::size);
+
 }
 
 namespace rva {
 
 namespace api {
-    inline constexpr std::uintptr_t luaB_print = 0x1816cc8;
-    inline constexpr std::uintptr_t luaL_argerror = 0x18149b8;
-    inline constexpr std::uintptr_t luaL_checkany = 0x18150b8;
-    inline constexpr std::uintptr_t luaL_checkinteger = 0x181524c;
-    inline constexpr std::uintptr_t luaL_checktype = 0x1815070;
-    inline constexpr std::uintptr_t luaL_errorL = 0x1814ab8;
-    inline constexpr std::uintptr_t luaL_getmetafield = 0x18154ac;
-    inline constexpr std::uintptr_t luaL_optinteger = 0x18152dc;
-    inline constexpr std::uintptr_t luaL_register = 0x18155ac;
-    inline constexpr std::uintptr_t luaL_tolstring = 0x18160f4;
-    inline constexpr std::uintptr_t luaL_typeerrorL = 0x1814b04;
-    inline constexpr std::uintptr_t lua_call = 0x181fc08;
-    inline constexpr std::uintptr_t lua_createtable = 0x1812198;
-    inline constexpr std::uintptr_t lua_error = 0x180f8bc;
-    inline constexpr std::uintptr_t lua_getfenv = 0x1812518;
-    inline constexpr std::uintptr_t lua_getmetatable = 0x18123b8;
-    inline constexpr std::uintptr_t lua_getreadonly = 0x18122e4;
-    inline constexpr std::uintptr_t lua_gettop = 0x180fcac;
-    inline constexpr std::uintptr_t lua_insert = 0x180fea8;
-    inline constexpr std::uintptr_t lua_iscfunction = 0x1810220;
-    inline constexpr std::uintptr_t lua_isnumber = 0x1810318;
-    inline constexpr std::uintptr_t lua_newthread = 0x180fb90;
-    inline constexpr std::uintptr_t lua_newuserdatatagged = 0x1813660;
-    inline constexpr std::uintptr_t lua_next = 0x1813294;
-    inline constexpr std::uintptr_t lua_objlen = 0x1810dd0;
-    inline constexpr std::uintptr_t lua_pcall = 0x1812dbc;
-    inline constexpr std::uintptr_t lua_pushboolean = 0x1811a04;
-    inline constexpr std::uintptr_t lua_pushcclosurek = 0x18118b4;
-    inline constexpr std::uintptr_t lua_pushinteger = 0x1811474;
-    inline constexpr std::uintptr_t lua_pushlstring = 0x18116b4;
-    inline constexpr std::uintptr_t lua_pushnil = 0x181136c;
-    inline constexpr std::uintptr_t lua_pushstring = 0x181178c;
-    inline constexpr std::uintptr_t lua_pushthread = 0x1811b28;
-    inline constexpr std::uintptr_t lua_pushvalue = 0x181009c;
-    inline constexpr std::uintptr_t lua_rawget = 0x1811ed4;
-    inline constexpr std::uintptr_t lua_rawset = 0x1812884;
-    inline constexpr std::uintptr_t lua_ref = 0x1813cd4;
-    inline constexpr std::uintptr_t lua_setfenv = 0x1812c48;
-    inline constexpr std::uintptr_t lua_setmetatable = 0x1812b3c;
-    inline constexpr std::uintptr_t lua_setreadonly = 0x1812270;
-    inline constexpr std::uintptr_t lua_setsafeenv = 0x1812344;
-    inline constexpr std::uintptr_t lua_settop = 0x180fcc0;
-    inline constexpr std::uintptr_t lua_setuserdatametamethods = 0x18142e0;
-    inline constexpr std::uintptr_t lua_tolstring = 0x18109f0;
-    inline constexpr std::uintptr_t lua_touserdatatagged = 0x1811074;
-    inline constexpr std::uintptr_t lua_type = 0x1810188;
-    inline constexpr std::uintptr_t lua_typename = 0x18101fc;
-    inline constexpr std::uintptr_t lua_unref = 0x1813f50;
-    inline constexpr std::uintptr_t lua_xpush = 0x180fa98;
+    inline constexpr std::uintptr_t unresolved = 0;
+
+    inline constexpr std::uintptr_t luaB_print = 0x18ab960;
+    inline constexpr std::uintptr_t luaL_argerror = 0x18a9a28;
+    inline constexpr std::uintptr_t luaL_checkany = 0x18aa15c;
+    inline constexpr std::uintptr_t luaL_checkinteger = 0x18aa2f0;
+    inline constexpr std::uintptr_t luaL_checktype = 0x18aa114;
+    inline constexpr std::uintptr_t luaL_errorL = 0x18a9b5c;
+    inline constexpr std::uintptr_t luaL_getmetafield = 0x18aa550;
+    inline constexpr std::uintptr_t luaL_optinteger = 0x18aa380;
+    inline constexpr std::uintptr_t luaL_register = 0x18aa650;
+    inline constexpr std::uintptr_t luaL_tolstring = 0x18ab004;
+    inline constexpr std::uintptr_t luaL_typeerrorL = 0x18a9ba8;
+    inline constexpr std::uintptr_t lua_call = 0x18b4d4c;
+    inline constexpr std::uintptr_t lua_createtable = 0x18a70bc;
+    inline constexpr std::uintptr_t lua_error = 0x18a4894;
+    inline constexpr std::uintptr_t lua_getfenv = 0x18a7424;
+    inline constexpr std::uintptr_t lua_getfield = 0x18a6bd0;
+    inline constexpr std::uintptr_t lua_getmetatable = 0x18a72d0;
+    inline constexpr std::uintptr_t lua_getreadonly = 0x18a71fc;
+    inline constexpr std::uintptr_t lua_gettop = 0x18a4c50;
+    inline constexpr std::uintptr_t lua_insert = 0x18a4e38;
+    inline constexpr std::uintptr_t lua_iscfunction = 0x18a51a8;
+    inline constexpr std::uintptr_t lua_isnumber = 0x18a52a0;
+    inline constexpr std::uintptr_t lua_newthread = 0x18a4b40;
+    inline constexpr std::uintptr_t lua_newuserdatatagged = 0x18a86dc;
+    inline constexpr std::uintptr_t lua_next = 0x18a8334;
+    inline constexpr std::uintptr_t lua_objlen = 0x18a5d58;
+    inline constexpr std::uintptr_t lua_pcall = 0x18a7cd4;
+    inline constexpr std::uintptr_t lua_pushboolean = 0x18a697c;
+    inline constexpr std::uintptr_t lua_pushcclosurek = 0x18a67e8;
+    inline constexpr std::uintptr_t lua_pushinteger = 0x18a63e4;
+    inline constexpr std::uintptr_t lua_pushlstring = 0x18a65f4;
+    inline constexpr std::uintptr_t lua_pushnil = 0x18a62f4;
+    inline constexpr std::uintptr_t lua_pushnumber = 0x18a6360;
+    inline constexpr std::uintptr_t lua_pushstring = 0x18a66c0;
+    inline constexpr std::uintptr_t lua_pushthread = 0x18a6a88;
+    inline constexpr std::uintptr_t lua_pushvalue = 0x18a5030;
+    inline constexpr std::uintptr_t lua_rawequal = 0x18a53ac;
+    inline constexpr std::uintptr_t lua_rawget = 0x18a6e10;
+    inline constexpr std::uintptr_t lua_rawset = 0x18a7794;
+    inline constexpr std::uintptr_t lua_ref = unresolved;
+    inline constexpr std::uintptr_t lua_replace = 0x18a4ef0;
+    inline constexpr std::uintptr_t lua_setfenv = 0x18a7b58;
+    inline constexpr std::uintptr_t lua_setfield = 0x18a75c4;
+    inline constexpr std::uintptr_t lua_setmetatable = 0x18a7a4c;
+    inline constexpr std::uintptr_t lua_setreadonly = 0x18a7188;
+    inline constexpr std::uintptr_t luaF_newLclosure = 0x18b5a8c;
+    inline constexpr std::uintptr_t lua_setsafeenv = 0x18a725c;
+    inline constexpr std::uintptr_t lua_settop = 0x18a4c64;
+    inline constexpr std::uintptr_t lua_setuserdatametamethods = unresolved;
+    inline constexpr std::uintptr_t lua_toboolean = 0x18a5868;
+    inline constexpr std::uintptr_t lua_tolstring = 0x18a5978;
+    inline constexpr std::uintptr_t lua_touserdatatagged = unresolved;
+    inline constexpr std::uintptr_t lua_type = 0x18a5110;
+    inline constexpr std::uintptr_t lua_typename = 0x18a5184;
+    inline constexpr std::uintptr_t lua_unref = unresolved;
+    inline constexpr std::uintptr_t lua_xpush = 0x18a4a54;
 }
 
 namespace vm {
-    inline constexpr std::uintptr_t luau_execute = 0x18358e0;
-    inline constexpr std::uintptr_t luaD_call = 0x181fa08;
-    inline constexpr std::uintptr_t luaD_pcall = 0x18203f4;
-    inline constexpr std::uintptr_t luaD_rawrunprotected = 0x181f4a8;
-    inline constexpr std::uintptr_t luaD_growstack = 0x180f7fc;
-    inline constexpr std::uintptr_t luau_load = 0x1831fbc;
-    inline constexpr std::uintptr_t resume_prepare = 0x181fdac;
-    inline constexpr std::uintptr_t lua_resume = 0x181fd44;
-    inline constexpr std::uintptr_t lua_resumeerror = 0x18200c0;
-    inline constexpr std::uintptr_t luaH_new = 0x182dd90;
-    inline constexpr std::uintptr_t luaH_getn = 0x182e978;
-    inline constexpr std::uintptr_t luaH_next = 0x182d87c;
-    inline constexpr std::uintptr_t luaS_newlstr = 0x182a094;
-    inline constexpr std::uintptr_t luaS_hash = 0x1829d98;
-    inline constexpr std::uintptr_t luaM_new = 0x18275dc;
-    inline constexpr std::uintptr_t luaG_readonlyerror = 0x181e6d8;
-    inline constexpr std::uintptr_t luaF_newproto = 0x1820954;
-    inline constexpr std::uintptr_t index2addr_pseudo = 0x18148bc;
-    inline constexpr std::uintptr_t luau_precall = 0x183e468;
-    inline constexpr std::uintptr_t luaC_barrierback = 0x1822240;
-    inline constexpr std::uintptr_t luau_execute_fast = 0x1839e38;
-    inline constexpr std::uintptr_t luau_execute_singlestep = 0x18358f4;
+    inline constexpr std::uintptr_t luau_execute = 0x18cac7c;
+    inline constexpr std::uintptr_t luaD_call = 0x188fe2c;
+    inline constexpr std::uintptr_t luaD_pcall = 0x189076c;
+    inline constexpr std::uintptr_t luaD_rawrunprotected = 0x188f8cc;
+    inline constexpr std::uintptr_t lua_checkstack = 0x18a47d4;
+    inline constexpr std::uintptr_t luau_load = 0x18c7258;
+    inline constexpr std::uintptr_t luau_load_body = 0x18c7374;
+    inline constexpr std::uintptr_t resume_prepare = 0x18901d4;
+    inline constexpr std::uintptr_t lua_resume = 0x18b4e90;
+    inline constexpr std::uintptr_t lua_yield = 0x18b53d8;
+    inline constexpr std::uintptr_t lua_resumeerror = 0x18b51f4;
+    inline constexpr std::uintptr_t luaH_new = 0x18c2e74;
+    inline constexpr std::uintptr_t luaH_getn = 0x189ed58;
+    inline constexpr std::uintptr_t luaH_next = 0x189dc68;
+    inline constexpr std::uintptr_t luaS_newlstr = 0x18bf228;
+    inline constexpr std::uintptr_t luaS_hash = 0x189a1a8;
+    inline constexpr std::uintptr_t luaM_new = 0x18979f0;
+    inline constexpr std::uintptr_t luaG_readonlyerror = 0x18b383c;
+    inline constexpr std::uintptr_t luaF_newproto = 0x18b59d0;
+    inline constexpr std::uintptr_t index2addr_pseudo = 0x18a9940;
+    inline constexpr std::uintptr_t luau_precall = 0x18ae99c;
+    inline constexpr std::uintptr_t luaC_barrierback = 0x18b72d0;
+    inline constexpr std::uintptr_t luau_execute_fast = 0x18cf1f8;
+    inline constexpr std::uintptr_t luau_execute_singlestep = 0x18cac90;
+    inline constexpr std::uintptr_t opcode_decode_table = 0x5db5250;
+    inline constexpr std::uintptr_t opcode_aux_table = 0x5db5350;
 }
 
 namespace engine {
-    inline constexpr std::uintptr_t capability_name_func = 0x45b468;
-    inline constexpr std::uintptr_t thread_capabilities = 0x215588;
-    inline constexpr std::uintptr_t script_resume = 0x22c098;
-    inline constexpr std::uintptr_t lua_getthreaddata = 0x1813048;
+    inline constexpr std::uintptr_t thread_capabilities = 0x2115a4;
+    inline constexpr std::uintptr_t script_resume = 0x238490;
+    inline constexpr std::uintptr_t lua_getthreaddata = 0x18a80e8;
+    inline constexpr std::uintptr_t script_context_tls = 0x46a7b0;
+    inline constexpr std::uintptr_t bytecode_validate = 0x19f064;
+    inline constexpr std::uintptr_t version_string = 0x66d4970;
+    inline constexpr std::uintptr_t task_scheduler_target_fps = 0x72f44c0;
+    inline constexpr std::uintptr_t task_scheduler = 0x76172e0;
 }
 
 namespace instance {
@@ -271,9 +469,13 @@ namespace instance {
     inline constexpr std::uintptr_t push = 0x172bd4;
     inline constexpr std::uintptr_t register_ = 0x16e0b0;
     inline constexpr std::uintptr_t tag_global = 0x7228ac8;
-    inline constexpr std::uintptr_t index = 0x171634;
+    inline constexpr std::uintptr_t index = 0x16b514;
     inline constexpr std::uintptr_t namecall = 0x172484;
     inline constexpr std::uintptr_t newindex = 0x17219c;
+    inline constexpr std::uintptr_t intern_name = 0x151046c;
+    inline constexpr std::uintptr_t member_lookup = 0x181fac;
+    inline constexpr std::uintptr_t member_dispatch = 0x16c8b0;
+    inline constexpr std::uintptr_t callback_set = 0x52a6ae8;
 }
 
 namespace base {
