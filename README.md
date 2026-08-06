@@ -6,13 +6,12 @@
 <br />
 
 <a href="https://github.com/Ring0lw/mac-offsets-roblox/blob/main/luau_offsets.hpp"><img src="https://img.shields.io/badge/luau__offsets.hpp-000000?style=for-the-badge&logo=cplusplus&logoColor=white&labelColor=000000" alt="luau_offsets.hpp" /></a>
-<a href="https://github.com/Ring0lw/mac-offsets-roblox/blob/main/offsets.json"><img src="https://img.shields.io/badge/offsets.json-000000?style=for-the-badge&logo=json&logoColor=white&labelColor=000000" alt="offsets.json" /></a>
 
 <br />
 
-<img src="https://img.shields.io/badge/7310942-000000?style=for-the-badge&logo=apple&logoColor=white&labelColor=000000" alt="build" />
+<img src="https://img.shields.io/badge/0.733.0.7330989-000000?style=for-the-badge&logo=apple&logoColor=white&labelColor=000000" alt="build" />
 <img src="https://img.shields.io/badge/arm64-000000?style=for-the-badge&logo=arm&logoColor=white&labelColor=000000" alt="arm64" />
-<img src="https://img.shields.io/badge/176_offsets-000000?style=for-the-badge&labelColor=000000" alt="176 offsets" />
+<img src="https://img.shields.io/badge/435_offsets-000000?style=for-the-badge&labelColor=000000" alt="435 offsets" />
 
 <br />
 <br />
