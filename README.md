@@ -26,3 +26,6 @@
 <a href="https://jewguard.xyz"><img src="https://img.shields.io/badge/jewguard.xyz-000000?style=for-the-badge&logo=shieldsdotio&logoColor=white&labelColor=000000" alt="jewguard.xyz" /></a>
 
 </div>
+
+
+# Updates have been paused
